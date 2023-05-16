@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="LiskovSubstitutionPrinciple\Solution\ValueObjects\CnpjValueObject.cs\**" />
+    <EmbeddedResource Remove="LiskovSubstitutionPrinciple\Solution\ValueObjects\CnpjValueObject.cs\**" />
+    <None Remove="LiskovSubstitutionPrinciple\Solution\ValueObjects\CnpjValueObject.cs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="SingleResponsibilityPrinciple\Solution\Services\PhysicalPersonService.cs~RF1af6ddca.TMP" />
     <None Remove="SingleResponsibilityPrinciple\Violation\Services\AccountService.cs~RF1fb58340.TMP" />
   </ItemGroup>
