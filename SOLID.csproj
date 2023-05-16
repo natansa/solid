@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SingleResponsibilityPrinciple\Solution\Services\PhysicalPersonService.cs~RF1af6ddca.TMP" />
+    <None Remove="SingleResponsibilityPrinciple\Violation\Services\AccountService.cs~RF1fb58340.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="LiskovSubstitutionPrinciple\" />
+    <Folder Include="InterfaceSegregationPrinciple\" />
+    <Folder Include="DependencyInversionPrinciple\" />
+  </ItemGroup>
+
+</Project>
