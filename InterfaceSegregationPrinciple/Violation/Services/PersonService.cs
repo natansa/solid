@@ -2,7 +2,7 @@
 using SOLID.InterfaceSegregationPrinciple.Violation.Entities;
 using SOLID.InterfaceSegregationPrinciple.Violation.Enums;
 using SOLID.InterfaceSegregationPrinciple.Violation.Repository;
-using System.Net.Http.Headers;
+using SOLID.InterfaceSegregationPrinciple.Violation.ValueObjects;
 
 namespace SOLID.InterfaceSegregationPrinciple.Violation.Services;
 
@@ -43,6 +43,16 @@ public class PersonService
         var rowAffecteds = _legalPersonRepository.CreateNewLegalPerson(legalPerson);
         var success = rowAffecteds > 0;
         return success;
+    }
+
+    public PhysicalPersonEntity Get(CpfValueObject cpf)
+    {
+        return _physicalPersonRepository.Get(cpf);
+    }
+
+    public LegalPersonEntity Get(CnpjValueObject cnpj)
+    {
+        return _legalPersonRepository.Get(cnpj);
     }
 
     private void Validate(PersonEntity personEntity)
