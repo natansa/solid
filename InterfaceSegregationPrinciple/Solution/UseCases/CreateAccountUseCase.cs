@@ -3,14 +3,17 @@ using SOLID.InterfaceSegregationPrinciple.Solution.Mappers;
 using SOLID.InterfaceSegregationPrinciple.Solution.Repository;
 using SOLID.InterfaceSegregationPrinciple.Solution.Services;
 using SOLID.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
+using SOLID.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 
 namespace SOLID.InterfaceSegregationPrinciple.Solution.UseCases;
 
 public class CreateAccountUseCase
 {
-    private readonly PersonService _personService;
-    private readonly AccountService _accountService;
-    private readonly AccountTypeAnalisysService _accountTypeAnalisysService;
+    private readonly IPersonService _personService;
+    private readonly IPersonQueryService _personQueryService;
+    private readonly IPersonCommandService _personCommandService;
+    private readonly IAccountService _accountService;
+    private readonly IAccountTypeAnalisysService _accountTypeAnalisysService;
 
     public CreateAccountUseCase()
     {
@@ -22,6 +25,8 @@ public class CreateAccountUseCase
         );
 
         _personService = new PersonService(new PersonRepository(), new PhysicalPersonRepository(), new LegalPersonRepository());
+        _personQueryService = new PersonService(new PersonRepository(), new PhysicalPersonRepository(), new LegalPersonRepository());
+        _personCommandService = new PersonService(new PersonRepository(), new PhysicalPersonRepository(), new LegalPersonRepository());
         _accountService = new AccountService(new AccountRepository());
     }
 
@@ -39,13 +44,23 @@ public class CreateAccountUseCase
         return default;
     }
 
-    private bool CreatePerson(CreateAccountInput input) 
-    {
-        if (_personService.IsLegalPerson(input))
-        {
-            return _personService.Create(input.MapToLegalPersonEntity());
-        }
+    //private bool CreatePerson(CreateAccountInput input) 
+    //{
+    //    if (_personService.IsLegalPerson(input))
+    //    {
+    //        return _personService.Create(input.MapToLegalPersonEntity());
+    //    }
             
-        return _personService.Create(input.MapToPhysicalPersonEntity());
+    //    return _personService.Create(input.MapToPhysicalPersonEntity());
+    //}
+
+    private bool CreatePerson(CreateAccountInput input)
+    {
+        if (_personQueryService.IsLegalPerson(input))
+        {
+            return _personCommandService.Create(input.MapToLegalPersonEntity());
+        }
+
+        return _personCommandService.Create(input.MapToPhysicalPersonEntity());
     }
 }

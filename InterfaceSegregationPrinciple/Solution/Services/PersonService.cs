@@ -2,11 +2,12 @@
 using SOLID.InterfaceSegregationPrinciple.Solution.Entities;
 using SOLID.InterfaceSegregationPrinciple.Solution.Enums;
 using SOLID.InterfaceSegregationPrinciple.Solution.Repository;
+using SOLID.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 using SOLID.InterfaceSegregationPrinciple.Solution.ValueObjects;
 
 namespace SOLID.InterfaceSegregationPrinciple.Solution.Services;
 
-public class PersonService
+public class PersonService : IPersonService, IPersonQueryService, IPersonCommandService
 {
     private readonly PersonRepository _personRepository;
     private readonly PhysicalPersonRepository _physicalPersonRepository;

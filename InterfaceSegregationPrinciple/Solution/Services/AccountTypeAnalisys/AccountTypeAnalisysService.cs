@@ -1,6 +1,8 @@
-﻿namespace SOLID.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using SOLID.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 
-public class AccountTypeAnalisysService
+namespace SOLID.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
+
+public class AccountTypeAnalisysService : IAccountTypeAnalisysService
 {
     private readonly SmsService _smsService;
     private readonly ComplianceService _complianceService;

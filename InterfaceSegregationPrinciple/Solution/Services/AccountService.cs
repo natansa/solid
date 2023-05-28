@@ -1,9 +1,10 @@
 ﻿using SOLID.InterfaceSegregationPrinciple.Solution.Entities;
 using SOLID.InterfaceSegregationPrinciple.Solution.Repository;
+using SOLID.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 
 namespace SOLID.InterfaceSegregationPrinciple.Solution.Services;
 
-public class AccountService
+public class AccountService : IAccountService
 {
     private readonly AccountRepository _accountRepository;
 
