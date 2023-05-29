@@ -16,6 +16,7 @@ public class Startup
     {
         ConfigureRepository(services);
         ConfigureService(services);
+        ConfigureHandlers(services);
         ConfigureUseCase(services);
     }
 
