@@ -3,11 +3,11 @@ using SOLID.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
 
 namespace Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
 
-public class IndividualAccountHandler : AccountTypeAnalisyHandler
+public class IndividualAccountChainsHandler : AccountTypeAnalisyChainsHandler
 {
     private readonly SmsService _smsService;
 
-    public IndividualAccountHandler(SmsService smsService)
+    public IndividualAccountChainsHandler(SmsService smsService)
     {
         _smsService = smsService;
     }

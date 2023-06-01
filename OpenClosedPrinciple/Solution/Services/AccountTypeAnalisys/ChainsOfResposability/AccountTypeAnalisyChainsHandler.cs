@@ -2,11 +2,11 @@
 
 namespace Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
 
-public abstract class AccountTypeAnalisyHandler
+public abstract class AccountTypeAnalisyChainsHandler
 {
-    protected AccountTypeAnalisyHandler _nextHandler;
+    protected AccountTypeAnalisyChainsHandler _nextHandler;
 
-    public void SetNextHandler(AccountTypeAnalisyHandler handler)
+    public void SetNextHandler(AccountTypeAnalisyChainsHandler handler)
     {
         _nextHandler = handler;
     }

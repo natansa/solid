@@ -3,11 +3,11 @@ using SOLID.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
 
 namespace Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
 
-public class CorporateAccountHandler : AccountTypeAnalisyHandler
+public class CorporateAccountChainsHandler : AccountTypeAnalisyChainsHandler
 {
     private readonly ComplianceService _complianceService;
 
-    public CorporateAccountHandler(ComplianceService complianceService)
+    public CorporateAccountChainsHandler(ComplianceService complianceService)
     {
         _complianceService = complianceService;
     }
