@@ -7,9 +7,9 @@ public class InvestmentAccountChainsHandler : AccountTypeAnalisyChainsHandler
 {
     private readonly B3Service _b3Service;
 
-    public InvestmentAccountChainsHandler(B3Service b3Service)
+    public InvestmentAccountChainsHandler()
     {
-        _b3Service = b3Service;
+        _b3Service = new B3Service();
     }
 
     public override void HandleRequest(AccountTypeAnalisy accountTypeAnalisy)

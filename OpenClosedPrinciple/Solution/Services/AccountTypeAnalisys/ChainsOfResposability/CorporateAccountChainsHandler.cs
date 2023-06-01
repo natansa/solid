@@ -7,9 +7,9 @@ public class CorporateAccountChainsHandler : AccountTypeAnalisyChainsHandler
 {
     private readonly ComplianceService _complianceService;
 
-    public CorporateAccountChainsHandler(ComplianceService complianceService)
+    public CorporateAccountChainsHandler()
     {
-        _complianceService = complianceService;
+        _complianceService = new ComplianceService();
     }
 
     public override void HandleRequest(AccountTypeAnalisy accountTypeAnalisy)

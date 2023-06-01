@@ -14,8 +14,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="OpenClosedPrinciple\Solution\Services\AccountTypeAnalisys\Strategy\" />
-  </ItemGroup>
-
 </Project>

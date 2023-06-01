@@ -7,9 +7,9 @@ public class IndividualAccountChainsHandler : AccountTypeAnalisyChainsHandler
 {
     private readonly SmsService _smsService;
 
-    public IndividualAccountChainsHandler(SmsService smsService)
+    public IndividualAccountChainsHandler()
     {
-        _smsService = smsService;
+        _smsService = new SmsService();
     }
 
     public override void HandleRequest(AccountTypeAnalisy accountTypeAnalisy)
