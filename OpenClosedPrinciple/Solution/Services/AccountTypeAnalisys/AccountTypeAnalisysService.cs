@@ -23,7 +23,12 @@ public class AccountTypeAnalisysService
         _corporateAccountHandler.SetNextHandler(_investmentAccountHandler);
     }
 
-    public void Dispatcher(AccountTypeAnalisy accountTypeAnalisy) 
+    public void DispatcherChainsOfResponsability(AccountTypeAnalisy accountTypeAnalisy) 
+    {
+        _individualAccountHandler.HandleRequest(accountTypeAnalisy);
+    }
+
+    public void DispatcherStrategy(AccountTypeAnalisy accountTypeAnalisy)
     {
         _individualAccountHandler.HandleRequest(accountTypeAnalisy);
     }

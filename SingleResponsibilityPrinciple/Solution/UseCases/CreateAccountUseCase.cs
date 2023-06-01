@@ -21,13 +21,7 @@ public class CreateAccountUseCase
 
     public CreateAccountOutput Create(CreateAccountInput input)
     {
-        var successCreatedPhysicalPerson = _physicalPersonService.Create(new PhysicalPersonEntity
-        (
-            name: input.Name,
-            birthday: input.Birthday,
-            cpf: new CpfValueObject(input.Cpf),
-            phone: input.Phone
-        ));
+        bool successCreatedPhysicalPerson = CreatedPhysicalPerson(input);
 
         var successCreatedAccount = _accountService.Create(new AccountEntity(password: input.Password));
 
@@ -38,5 +32,16 @@ public class CreateAccountUseCase
         }
 
         return default;
+    }
+
+    private bool CreatedPhysicalPerson(CreateAccountInput input)
+    {
+        return _physicalPersonService.Create(new PhysicalPersonEntity
+        (
+            name: input.Name,
+            birthday: input.Birthday,
+            cpf: new CpfValueObject(input.Cpf),
+            phone: input.Phone
+        ));
     }
 }

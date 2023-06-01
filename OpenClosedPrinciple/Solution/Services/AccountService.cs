@@ -1,4 +1,5 @@
-﻿using SOLID.OpenClosedPrinciple.Solution.Entities;
+﻿using Api.OpenClosedPrinciple.Solution.Models;
+using SOLID.OpenClosedPrinciple.Solution.Entities;
 using SOLID.OpenClosedPrinciple.Solution.Repository;
 
 namespace SOLID.OpenClosedPrinciple.Solution.Services;
@@ -12,12 +13,12 @@ public class AccountService
         _accountRepository = accountRepository;
     }
 
-    public (bool Success, AccountEntity AccountEntity) Create(AccountEntity account)
+    public CreateAccountResult Create(AccountEntity account)
     {
         ValidateAccount(account);
         var rowAffecteds = _accountRepository.CreateNewAccount(account);
         var success = rowAffecteds > 0;
-        return new (success, account);
+        return new CreateAccountResult(success, account);
     }
 
     private void ValidateAccount(AccountEntity account) 

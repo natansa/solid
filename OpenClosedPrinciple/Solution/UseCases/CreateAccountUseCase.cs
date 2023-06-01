@@ -25,14 +25,14 @@ public class CreateAccountUseCase
         _accountService = new AccountService(new AccountRepository());
     }
 
-    public CreateAccountOutput Create(CreateAccountInput input)
+    public CreateAccountSolutionOutput Create(CreateAccountSolutionInput input)
     {
         var successCreatedPhysicalPerson = _physicalPersonService.Create(input.MapToPhysicalPersonEntity());
         var successCreatedAccount = _accountService.Create(input.MapToAccountEntity());
 
         if (successCreatedPhysicalPerson && successCreatedAccount.Success)
         {
-            _accountTypeAnalisysService.Dispatcher(successCreatedAccount.AccountEntity.MapToAnalisy(input));
+            _accountTypeAnalisysService.DispatcherChainsOfResponsability(successCreatedAccount.AccountEntity.MapToAnalisy(input));
 
             return successCreatedAccount.AccountEntity.MapToOuuput();
         }

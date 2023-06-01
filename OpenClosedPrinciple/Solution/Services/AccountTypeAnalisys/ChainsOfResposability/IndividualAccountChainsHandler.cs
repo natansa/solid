@@ -1,4 +1,7 @@
-﻿namespace SOLID.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using SOLID.OpenClosedPrinciple.Solution.Services;
+using SOLID.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
+
+namespace Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
 
 public class IndividualAccountHandler : AccountTypeAnalisyHandler
 {
@@ -16,7 +19,7 @@ public class IndividualAccountHandler : AccountTypeAnalisyHandler
             _smsService.Send(accountTypeAnalisy.Input.Phone);
             return;
         }
-        
+
         _nextHandler?.HandleRequest(accountTypeAnalisy);
     }
 }

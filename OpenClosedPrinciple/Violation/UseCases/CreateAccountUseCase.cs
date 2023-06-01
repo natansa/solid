@@ -24,15 +24,9 @@ public class CreateAccountUseCase
         _b3Service = new B3Service();
     }
 
-    public CreateAccountOutput Create(CreateAccountInput input)
+    public CreateAccountViolationOutput Create(CreateAccountViolationInput input)
     {
-        var successCreatedPhysicalPerson = _physicalPersonService.Create(new PhysicalPersonEntity
-        (
-            name: input.Name,
-            birthday: input.Birthday,
-            cpf: new CpfValueObject(input.Cpf),
-            phone: input.Phone
-        ));
+        bool successCreatedPhysicalPerson = CreatedPhysicalPerson(input);
 
         var successCreatedAccount = _accountService.Create(new AccountEntity
         (
@@ -57,9 +51,20 @@ public class CreateAccountUseCase
                 _b3Service.Send(successCreatedAccount.AccountEntity.AccountNumber);
             }
 
-            return new CreateAccountOutput(successCreatedAccount.AccountEntity.AccountNumber);
+            return new CreateAccountViolationOutput(successCreatedAccount.AccountEntity.AccountNumber);
         }
-        
+
         return default;
+    }
+
+    private bool CreatedPhysicalPerson(CreateAccountViolationInput input)
+    {
+        return _physicalPersonService.Create(new PhysicalPersonEntity
+        (
+            name: input.Name,
+            birthday: input.Birthday,
+            cpf: new CpfValueObject(input.Cpf),
+            phone: input.Phone
+        ));
     }
 }

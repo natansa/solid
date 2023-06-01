@@ -1,8 +1,8 @@
 ﻿namespace SOLID.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
 
-public class CreateAccountOutput
+public class CreateAccountSolutionOutput
 {
-    public CreateAccountOutput(string accountNumber)
+    public CreateAccountSolutionOutput(string accountNumber)
     {
         AccountNumber = accountNumber;
     }

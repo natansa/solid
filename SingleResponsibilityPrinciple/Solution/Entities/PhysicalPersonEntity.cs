@@ -28,6 +28,6 @@ public class PhysicalPersonEntity
 
     private bool IsMinorAge()
     {
-        return DateTime.Now.Year - Birthday.Year > 18;
+        return DateTime.Now.Year - Birthday.Year < 18;
     }
 }

@@ -34,11 +34,11 @@ public class AccountService
 
         physicalPerson.CreateAccount();
 
-        var accountAlreadyExists = _accountRepository.AccountAlreadyExists(physicalPerson.AccountNumber);
+        var accountAlreadyExists = _accountRepository.AccountAlreadyExists(physicalPerson.GetAccountNumber());
 
-        if (accountAlreadyExists) throw new InvalidOperationException($"Conta {physicalPerson.AccountNumber} ja existe");
+        if (accountAlreadyExists) throw new InvalidOperationException($"Conta {physicalPerson.GetAccountNumber()} ja existe");
 
-        _accountRepository.CreateNewAccount(physicalPerson.AccountNumber);
+        _accountRepository.CreateNewAccount(physicalPerson.GetAccountNumber());
 
         SendSms(physicalPerson);
     }

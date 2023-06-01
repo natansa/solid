@@ -1,4 +1,6 @@
-﻿namespace SOLID.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using SOLID.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
+
+namespace Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
 
 public abstract class AccountTypeAnalisyHandler
 {

@@ -11,7 +11,7 @@
 
         public bool IsInvalid()
         {
-            return true;
+            return false;
         }
 
         public string GetFormatted() 

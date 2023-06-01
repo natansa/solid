@@ -7,9 +7,10 @@ public class PhysicalPersonEntity
     public string Name { get; set; }
     public DateTime Birthday { get; set; }
     public string Cpf { get; set; }
-    public string AccountNumber { get; set; }
     public string Password { get; set; }
     public string Phone { get; set; }
+
+    private string AccountNumber { get; set; }
 
     public void CreateAccount()
     {
@@ -38,5 +39,10 @@ public class PhysicalPersonEntity
     public bool IsOfLegalAge()
     {
         return DateTime.Now.Year - Birthday.Year > 18;
+    }
+
+    public string GetAccountNumber()
+    {
+        return AccountNumber;
     }
 }

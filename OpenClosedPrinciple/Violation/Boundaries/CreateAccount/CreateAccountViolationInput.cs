@@ -1,6 +1,6 @@
-﻿namespace SOLID.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
+﻿namespace SOLID.OpenClosedPrinciple.Violation.Boundaries.CreateAccount;
 
-public class CreateAccountInput
+public class CreateAccountViolationInput
 {
     public string Name { get; set; }
     public DateTime Birthday { get; set; }

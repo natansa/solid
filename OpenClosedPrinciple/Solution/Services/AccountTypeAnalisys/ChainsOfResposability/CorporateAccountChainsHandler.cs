@@ -1,4 +1,7 @@
-﻿namespace SOLID.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using SOLID.OpenClosedPrinciple.Solution.Services;
+using SOLID.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
+
+namespace Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
 
 public class CorporateAccountHandler : AccountTypeAnalisyHandler
 {
@@ -16,7 +19,7 @@ public class CorporateAccountHandler : AccountTypeAnalisyHandler
             _complianceService.Send(accountTypeAnalisy.AccountEntity.AccountNumber);
             return;
         }
-        
+
         _nextHandler?.HandleRequest(accountTypeAnalisy);
     }
 }
