@@ -6,7 +6,7 @@ namespace SOLID.LiskovSubstitutionPrinciple.Solution.Mappers;
 
 public static class AccountTypeAnalisyMappers
 {
-    public static AccountTypeAnalisy MapToAnalisy(this AccountEntity accountEntity, CreateAccountInput input) 
+    public static AccountTypeAnalisy MapToAnalisy(this AccountEntity accountEntity, CreateAccountSolutionInput input) 
     {
         return new AccountTypeAnalisy(input, accountEntity);
     }

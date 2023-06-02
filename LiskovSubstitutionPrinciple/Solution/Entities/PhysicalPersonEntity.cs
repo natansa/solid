@@ -2,19 +2,22 @@
 
 namespace SOLID.LiskovSubstitutionPrinciple.Solution.Entities;
 
-public class PhysicalPersonEntity : PersonEntity
+public class PhysicalPersonEntity
 {
-    public PhysicalPersonEntity(string name, DateTime birthday, CpfValueObject cpf, string phone) 
-        : base (name, phone)
+    public PhysicalPersonEntity(string name, DateTime birthday, CpfValueObject cpf, string phone)
     {
+        Name = name;
         Birthday = birthday;
         Cpf = cpf;
+        Phone = phone;
     }
 
+    public string Name { get; private set; }
     public DateTime Birthday { get; private set; }
     public CpfValueObject Cpf { get; private set; }
+    public string Phone { get; set; }
 
-    public override bool IsInvalid()
+    public bool IsInvalid()
     {
         if (Cpf.IsInvalid()) return true;
 
@@ -25,6 +28,6 @@ public class PhysicalPersonEntity : PersonEntity
 
     private bool IsMinorAge()
     {
-        return DateTime.Now.Year - Birthday.Year > 18;
+        return DateTime.Now.Year - Birthday.Year < 18;
     }
 }

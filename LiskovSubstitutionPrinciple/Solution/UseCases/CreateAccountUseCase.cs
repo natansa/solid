@@ -1,4 +1,5 @@
-﻿using SOLID.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
+﻿using Api.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
+using SOLID.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
 using SOLID.LiskovSubstitutionPrinciple.Solution.Mappers;
 using SOLID.LiskovSubstitutionPrinciple.Solution.Repository;
 using SOLID.LiskovSubstitutionPrinciple.Solution.Services;
@@ -8,7 +9,7 @@ namespace SOLID.LiskovSubstitutionPrinciple.Solution.UseCases;
 
 public class CreateAccountUseCase
 {
-    private readonly PersonService _personService;
+    private readonly PhysicalPersonService _physicalPersonService;
     private readonly AccountService _accountService;
     private readonly AccountTypeAnalisysService _accountTypeAnalisysService;
 
@@ -21,31 +22,43 @@ public class CreateAccountUseCase
             new B3Service()
         );
 
-        _personService = new PersonService(new PersonRepository(), new PhysicalPersonRepository(), new LegalPersonRepository());
+        _physicalPersonService = new PhysicalPersonService(new PhysicalPersonRepository());
         _accountService = new AccountService(new AccountRepository());
     }
 
-    public CreateAccountOutput Create(CreateAccountInput input)
+    public CreateAccountSolutionOutput Create(CreateAccountSolutionInput input)
     {
-        var successCreatedPerson = CreatePerson(input);
+        var successCreatedPhysicalPerson = _physicalPersonService.Create(input.MapToPhysicalPersonEntity());
         var successCreatedAccount = _accountService.Create(input.MapToAccountEntity());
 
-        if (successCreatedPerson && successCreatedAccount.Success)
+        if (successCreatedPhysicalPerson && successCreatedAccount.Success)
         {
-            _accountTypeAnalisysService.Dispatcher(successCreatedAccount.AccountEntity.MapToAnalisy(input));
-            return successCreatedAccount.AccountEntity.MapToOutput();
+            // OPEN CLOSED WITH CHAIS OF RESPNSABILITY
+            _accountTypeAnalisysService.DispatcherChainsOfResponsability(successCreatedAccount.AccountEntity.MapToAnalisy(input));
+
+            // OPEN CLOSED WITH STRATEGY - MODEL ONE
+            _accountTypeAnalisysService.DispatcherStrategy(successCreatedAccount.AccountEntity.MapToAnalisy(input));
+
+            // OPEN CLOSED WITH STRATEGY - MODEL TWO
+            switch (successCreatedAccount.AccountEntity.AccountType)
+            {
+                case Enums.AccountType.IndividualAccount:
+                    _accountTypeAnalisysService.DispatcherStrategy(new IndividualAccountStrategyHandler(successCreatedAccount.AccountEntity.MapToAnalisy(input)));
+                    break;
+                case Enums.AccountType.CorporateAccount:
+                    _accountTypeAnalisysService.DispatcherStrategy(new CorporateAccountStrategyHandler(successCreatedAccount.AccountEntity.MapToAnalisy(input)));
+                    break;
+                case Enums.AccountType.InvestmentAccount:
+                    _accountTypeAnalisysService.DispatcherStrategy(new InvestmentAccountStrategyHandler(successCreatedAccount.AccountEntity.MapToAnalisy(input)));
+                    break;
+                default:
+                    throw new InvalidOperationException($"Erro in {nameof(successCreatedAccount.AccountEntity.AccountType)}");
+                    break;
+            }
+
+            return successCreatedAccount.AccountEntity.MapToOuuput();
         }
         
         return default;
-    }
-
-    private bool CreatePerson(CreateAccountInput input) 
-    {
-        if (_personService.IsLegalPerson(input))
-        {
-            return _personService.Create(input.MapToLegalPersonEntity());
-        }
-            
-        return _personService.Create(input.MapToPhysicalPersonEntity());
     }
 }
