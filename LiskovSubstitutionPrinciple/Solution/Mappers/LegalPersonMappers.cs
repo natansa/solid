@@ -3,15 +3,14 @@ using SOLID.LiskovSubstitutionPrinciple.Solution.Entities;
 
 namespace SOLID.LiskovSubstitutionPrinciple.Solution.Mappers;
 
-public static class PhysicalPersonMappers
+public static class LegalPersonMappers
 {
-    public static PhysicalPersonEntity MapToPhysicalPersonEntity(this CreateAccountLspSolutionInput input) 
+    public static LegalPersonEntity MapToLegalPersonEntity(this CreateAccountLspSolutionInput input) 
     {
-        return new PhysicalPersonEntity
+        return new LegalPersonEntity
         (
             name: input.Name,
-            birthday: input.Birthday,
-            cpf: input.MapToCpf(),
+            cnpj: input.MapToCnpj(),
             phone: input.Phone,
             token: input.Token
         );

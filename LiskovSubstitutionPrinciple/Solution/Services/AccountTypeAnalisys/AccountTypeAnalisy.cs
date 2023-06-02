@@ -5,12 +5,12 @@ namespace SOLID.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisy
 
 public class AccountTypeAnalisy
 {
-    public AccountTypeAnalisy(CreateAccountSolutionInput input, AccountEntity accountEntity)
+    public AccountTypeAnalisy(CreateAccountLspSolutionInput input, AccountEntity accountEntity)
     {
         Input = input;
         AccountEntity = accountEntity;
     }
 
-    public CreateAccountSolutionInput Input { get; }
+    public CreateAccountLspSolutionInput Input { get; }
     public AccountEntity AccountEntity { get; }
 }

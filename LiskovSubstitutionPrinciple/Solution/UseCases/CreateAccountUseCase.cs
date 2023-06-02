@@ -9,9 +9,9 @@ namespace SOLID.LiskovSubstitutionPrinciple.Solution.UseCases;
 
 public class CreateAccountUseCase
 {
-    private readonly PhysicalPersonService _physicalPersonService;
     private readonly AccountService _accountService;
     private readonly AccountTypeAnalisysService _accountTypeAnalisysService;
+    private readonly PersonService _personService;
 
     public CreateAccountUseCase()
     {
@@ -22,13 +22,13 @@ public class CreateAccountUseCase
             new B3Service()
         );
 
-        _physicalPersonService = new PhysicalPersonService(new PhysicalPersonRepository());
+        _personService = new PersonService();
         _accountService = new AccountService(new AccountRepository());
     }
 
-    public CreateAccountSolutionOutput Create(CreateAccountSolutionInput input)
+    public CreateAccountLspSolutionOutput Create(CreateAccountLspSolutionInput input)
     {
-        var successCreatedPhysicalPerson = _physicalPersonService.Create(input.MapToPhysicalPersonEntity());
+        var successCreatedPhysicalPerson = _personService.Create(input);
         var successCreatedAccount = _accountService.Create(input.MapToAccountEntity());
 
         if (successCreatedPhysicalPerson && successCreatedAccount.Success)

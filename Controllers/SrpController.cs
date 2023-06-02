@@ -26,7 +26,7 @@ namespace Api.Controllers
         }
 
         [HttpPost("Solution")]
-        public void CreateAccountSolution(SolutionInput.CreateAccountInput createAccountInput)
+        public void CreateAccountSolution(SolutionInput.CreateAccountSrpSolutionInput createAccountInput)
         {
             _createAccountUseCase.Create(createAccountInput);
         }

@@ -6,7 +6,7 @@ namespace SOLID.LiskovSubstitutionPrinciple.Solution.Mappers;
 
 public static class AccountMappers
 {
-    public static AccountEntity MapToAccountEntity(this CreateAccountSolutionInput input) 
+    public static AccountEntity MapToAccountEntity(this CreateAccountLspSolutionInput input) 
     {
         return new AccountEntity
         (
@@ -15,8 +15,8 @@ public static class AccountMappers
         );
     }
 
-    public static CreateAccountSolutionOutput MapToOuuput(this AccountEntity accountEntity) 
+    public static CreateAccountLspSolutionOutput MapToOuuput(this AccountEntity accountEntity) 
     {
-        return new CreateAccountSolutionOutput(accountEntity.AccountNumber);
+        return new CreateAccountLspSolutionOutput(accountEntity.AccountNumber);
     }
 }

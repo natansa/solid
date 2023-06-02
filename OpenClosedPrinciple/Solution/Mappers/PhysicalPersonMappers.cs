@@ -5,7 +5,7 @@ namespace SOLID.OpenClosedPrinciple.Solution.Mappers;
 
 public static class PhysicalPersonMappers
 {
-    public static PhysicalPersonEntity MapToPhysicalPersonEntity(this CreateAccountSolutionInput input) 
+    public static PhysicalPersonEntity MapToPhysicalPersonEntity(this CreateAccountOcpSolutionInput input) 
     {
         return new PhysicalPersonEntity
         (

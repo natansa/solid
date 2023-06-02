@@ -26,7 +26,7 @@ public class CreateAccountUseCase
         _accountService = new AccountService(new AccountRepository());
     }
 
-    public CreateAccountSolutionOutput Create(CreateAccountSolutionInput input)
+    public CreateAccountOcpSolutionOutput Create(CreateAccountOcpSolutionInput input)
     {
         var successCreatedPhysicalPerson = _physicalPersonService.Create(input.MapToPhysicalPersonEntity());
         var successCreatedAccount = _accountService.Create(input.MapToAccountEntity());

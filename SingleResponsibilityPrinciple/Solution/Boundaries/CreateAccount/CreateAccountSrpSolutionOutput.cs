@@ -1,8 +1,8 @@
 ﻿namespace SOLID.SingleResponsibilityPrinciple.Solution.Boundaries.CreateAccount;
 
-public class CreateAccountOutput
+public class CreateAccountSrpSolutionOutput
 {
-    public CreateAccountOutput(string accountNumber)
+    public CreateAccountSrpSolutionOutput(string accountNumber)
     {
         AccountNumber = accountNumber;
     }

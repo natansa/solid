@@ -1,6 +1,6 @@
-﻿namespace SOLID.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
+﻿namespace SOLID.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
 
-public class CreateAccountSolutionInput
+public class CreateAccountOcpSolutionInput
 {
     public string Name { get; set; }
     public DateTime Birthday { get; set; }

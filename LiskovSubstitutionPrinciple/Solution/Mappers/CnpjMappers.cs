@@ -3,10 +3,10 @@ using SOLID.LiskovSubstitutionPrinciple.Solution.ValueObjects;
 
 namespace SOLID.LiskovSubstitutionPrinciple.Solution.Mappers;
 
-public static class CpfMappers
+public static class CnpjMappers
 {
-    public static CpfValueObject MapToCpf(this CreateAccountLspSolutionInput input) 
+    public static CnpjValueObject MapToCnpj(this CreateAccountLspSolutionInput input) 
     {
-        return new CpfValueObject(input.Document);
+        return new CnpjValueObject(input.Document);
     }
 }

@@ -1,8 +1,8 @@
 ﻿namespace SOLID.OpenClosedPrinciple.Violation.Boundaries.CreateAccount;
 
-public class CreateAccountViolationOutput
+public class CreateAccountOcpViolationOutput
 {
-    public CreateAccountViolationOutput(string accountNumber)
+    public CreateAccountOcpViolationOutput(string accountNumber)
     {
         AccountNumber = accountNumber;
     }

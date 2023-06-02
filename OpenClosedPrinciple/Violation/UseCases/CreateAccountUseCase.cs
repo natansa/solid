@@ -24,7 +24,7 @@ public class CreateAccountUseCase
         _b3Service = new B3Service();
     }
 
-    public CreateAccountViolationOutput Create(CreateAccountViolationInput input)
+    public CreateAccountOcpViolationOutput Create(CreateAccountOcpViolationInput input)
     {
         bool successCreatedPhysicalPerson = CreatedPhysicalPerson(input);
 
@@ -51,13 +51,13 @@ public class CreateAccountUseCase
                 _b3Service.Send(successCreatedAccount.AccountEntity.AccountNumber);
             }
 
-            return new CreateAccountViolationOutput(successCreatedAccount.AccountEntity.AccountNumber);
+            return new CreateAccountOcpViolationOutput(successCreatedAccount.AccountEntity.AccountNumber);
         }
 
         return default;
     }
 
-    private bool CreatedPhysicalPerson(CreateAccountViolationInput input)
+    private bool CreatedPhysicalPerson(CreateAccountOcpViolationInput input)
     {
         return _physicalPersonService.Create(new PhysicalPersonEntity
         (

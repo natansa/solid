@@ -1,8 +1,8 @@
 ﻿namespace SOLID.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
 
-public class CreateAccountSolutionOutput
+public class CreateAccountLspSolutionOutput
 {
-    public CreateAccountSolutionOutput(string accountNumber)
+    public CreateAccountLspSolutionOutput(string accountNumber)
     {
         AccountNumber = accountNumber;
     }

@@ -19,7 +19,7 @@ public class CreateAccountUseCase
         _smsService = new SmsService();
     }
 
-    public CreateAccountOutput Create(CreateAccountInput input)
+    public CreateAccountSrpSolutionOutput Create(CreateAccountSrpSolutionInput input)
     {
         bool successCreatedPhysicalPerson = CreatedPhysicalPerson(input);
 
@@ -28,13 +28,13 @@ public class CreateAccountUseCase
         if (successCreatedPhysicalPerson && successCreatedAccount.Success)
         {
             _smsService.Send(input.Phone);
-            return new CreateAccountOutput(successCreatedAccount.AccountEntity.AccountNumber);
+            return new CreateAccountSrpSolutionOutput(successCreatedAccount.AccountEntity.AccountNumber);
         }
 
         return default;
     }
 
-    private bool CreatedPhysicalPerson(CreateAccountInput input)
+    private bool CreatedPhysicalPerson(CreateAccountSrpSolutionInput input)
     {
         return _physicalPersonService.Create(new PhysicalPersonEntity
         (

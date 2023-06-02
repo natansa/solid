@@ -23,7 +23,7 @@ public class PhysicalPersonService
     private void Validate(PhysicalPersonEntity physicalPerson) 
     {
         if (physicalPerson == null) throw new ArgumentNullException(nameof(PhysicalPersonEntity));
-
+        
         if (physicalPerson.IsInvalid()) throw new InvalidOperationException(nameof(physicalPerson));
 
         if (PhysicalPersonAlreadyExists(physicalPerson)) throw new InvalidOperationException($"Pessoa {physicalPerson.Cpf} ja existe");

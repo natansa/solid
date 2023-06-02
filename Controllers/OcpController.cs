@@ -20,13 +20,13 @@ namespace Api.Controllers
         }
 
         [HttpPost("Violation")]
-        public void CreateAccountViolation(ViolationInput.CreateAccountViolationInput createAccountInput)
+        public void CreateAccountViolation(ViolationInput.CreateAccountOcpViolationInput createAccountInput)
         {
             _createAccountUseCaseViolation.Create(createAccountInput);
         }
 
         [HttpPost("Solution")]
-        public void CreateAccountSolution(SolutionInput.CreateAccountSolutionInput createAccountInput)
+        public void CreateAccountSolution(SolutionInput.CreateAccountOcpSolutionInput createAccountInput)
         {
             _createAccountUseCaseSolution.Create(createAccountInput);
         }

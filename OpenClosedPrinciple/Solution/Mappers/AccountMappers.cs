@@ -6,7 +6,7 @@ namespace SOLID.OpenClosedPrinciple.Solution.Mappers;
 
 public static class AccountMappers
 {
-    public static AccountEntity MapToAccountEntity(this CreateAccountSolutionInput input) 
+    public static AccountEntity MapToAccountEntity(this CreateAccountOcpSolutionInput input) 
     {
         return new AccountEntity
         (
@@ -15,8 +15,8 @@ public static class AccountMappers
         );
     }
 
-    public static CreateAccountSolutionOutput MapToOuuput(this AccountEntity accountEntity) 
+    public static CreateAccountOcpSolutionOutput MapToOuuput(this AccountEntity accountEntity) 
     {
-        return new CreateAccountSolutionOutput(accountEntity.AccountNumber);
+        return new CreateAccountOcpSolutionOutput(accountEntity.AccountNumber);
     }
 }
