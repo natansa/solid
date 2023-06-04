@@ -17,7 +17,7 @@ public class PersonService : IPersonService
         _legalPersonService = new LegalPersonService(new LegalPersonRepository(), new LegalPersonRepository());
     }
 
-    public bool Create(CreateAccountIspSolutionInput input) 
+    public bool Create(CreateAccountDipViolationInput input) 
     {
         Dictionary<AccountType, Func<bool>> personsService = new Dictionary<AccountType, Func<bool>>
         {

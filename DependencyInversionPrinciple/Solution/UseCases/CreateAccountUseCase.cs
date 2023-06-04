@@ -2,9 +2,6 @@
 using Api.DependencyInversionPrinciple.Solution.UseCases.Interfaces;
 using Api.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
 using Api.DependencyInversionPrinciple.Solution.Mappers;
-using Api.DependencyInversionPrinciple.Solution.Repository;
-using Api.DependencyInversionPrinciple.Solution.Services;
-using Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
 using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
 using Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys.Interfaces;
 
@@ -16,14 +13,16 @@ public class CreateAccountUseCase : ICreateAccountUseCase
     private readonly IAccountTypeAnalisysService _accountTypeAnalisysService;
     private readonly IPersonService _personService;
 
-    public CreateAccountUseCase()
+    public CreateAccountUseCase(IAccountService accountService, 
+                                IAccountTypeAnalisysService accountTypeAnalisysService, 
+                                IPersonService personService)
     {
-        _accountTypeAnalisysService = new AccountTypeAnalisysService();
-        _personService = new PersonService();
-        _accountService = new AccountService(new AccountRepository(), new AccountRepository());
+        _accountService = accountService;
+        _accountTypeAnalisysService = accountTypeAnalisysService;
+        _personService = personService;
     }
 
-    public CreateAccountIspSolutionOutput Create(CreateAccountIspSolutionInput input)
+    public CreateAccountDipSolutionOutput Create(CreateAccountDipSolutionInput input)
     {
         var successCreatedPhysicalPerson = _personService.Create(input);
         var successCreatedAccount = _accountService.Create(input.MapToAccountEntity());

@@ -4,31 +4,30 @@ using ViolationInput = Api.InterfaceSegregationPrinciple.Violation.Boundaries.Cr
 using SolutionUseCases = Api.InterfaceSegregationPrinciple.Solution.UseCases;
 using SolutionInput = Api.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
 
-namespace Api.Controllers
+namespace Api.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+public class IspController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class IspController : ControllerBase
+    private readonly ViolationUseCases.CreateAccountUseCase _createAccountUseCaseViolation;
+    private readonly SolutionUseCases.Interfaces.ICreateAccountUseCase _createAccountUseCaseSolution;
+
+    public IspController()
     {
-        private readonly ViolationUseCases.CreateAccountUseCase _createAccountUseCaseViolation;
-        private readonly SolutionUseCases.Interfaces.ICreateAccountUseCase _createAccountUseCaseSolution;
+        _createAccountUseCaseViolation = new ViolationUseCases.CreateAccountUseCase();
+        _createAccountUseCaseSolution = new SolutionUseCases.CreateAccountUseCase();
+    }
 
-        public IspController()
-        {
-            _createAccountUseCaseViolation = new ViolationUseCases.CreateAccountUseCase();
-            _createAccountUseCaseSolution = new SolutionUseCases.CreateAccountUseCase();
-        }
+    [HttpPost("Violation")]
+    public void CreateAccountViolation(ViolationInput.CreateAccountIspViolationInput createAccountInput)
+    {
+        _createAccountUseCaseViolation.Create(createAccountInput);
+    }
 
-        [HttpPost("Violation")]
-        public void CreateAccountViolation(ViolationInput.CreateAccountIspViolationInput createAccountInput)
-        {
-            _createAccountUseCaseViolation.Create(createAccountInput);
-        }
-
-        [HttpPost("Solution")]
-        public void CreateAccountSolution(SolutionInput.CreateAccountIspSolutionInput createAccountInput)
-        {
-            _createAccountUseCaseSolution.Create(createAccountInput);
-        }
+    [HttpPost("Solution")]
+    public void CreateAccountSolution(SolutionInput.CreateAccountIspSolutionInput createAccountInput)
+    {
+        _createAccountUseCaseSolution.Create(createAccountInput);
     }
 }

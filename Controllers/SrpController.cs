@@ -4,31 +4,30 @@ using ViolationEntities = Api.SingleResponsibilityPrinciple.Violation.Entities;
 using SolutionUseCases = Api.SingleResponsibilityPrinciple.Solution.UseCases;
 using SolutionInput = Api.SingleResponsibilityPrinciple.Solution.Boundaries.CreateAccount;
 
-namespace Api.Controllers
+namespace Api.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+public class SrpController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class SrpController : ControllerBase
+    private readonly ViolationServices.AccountService _accountServiceViolation;
+    private readonly SolutionUseCases.CreateAccountUseCase _createAccountUseCase;
+
+    public SrpController()
     {
-        private readonly ViolationServices.AccountService _accountServiceViolation;
-        private readonly SolutionUseCases.CreateAccountUseCase _createAccountUseCase;
+        _accountServiceViolation = new ViolationServices.AccountService();
+        _createAccountUseCase = new SolutionUseCases.CreateAccountUseCase();
+    }
 
-        public SrpController()
-        {
-            _accountServiceViolation = new ViolationServices.AccountService();
-            _createAccountUseCase = new SolutionUseCases.CreateAccountUseCase();
-        }
+    [HttpPost("Violation")]
+    public void CreateAccountViolation(ViolationEntities.PhysicalPersonEntity physicalPersonEntity)
+    {
+        _accountServiceViolation.CreateAccount(physicalPersonEntity);
+    }
 
-        [HttpPost("Violation")]
-        public void CreateAccountViolation(ViolationEntities.PhysicalPersonEntity physicalPersonEntity)
-        {
-            _accountServiceViolation.CreateAccount(physicalPersonEntity);
-        }
-
-        [HttpPost("Solution")]
-        public void CreateAccountSolution(SolutionInput.CreateAccountSrpSolutionInput createAccountInput)
-        {
-            _createAccountUseCase.Create(createAccountInput);
-        }
+    [HttpPost("Solution")]
+    public void CreateAccountSolution(SolutionInput.CreateAccountSrpSolutionInput createAccountInput)
+    {
+        _createAccountUseCase.Create(createAccountInput);
     }
 }

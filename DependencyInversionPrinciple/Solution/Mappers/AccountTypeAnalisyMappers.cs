@@ -6,7 +6,7 @@ namespace Api.DependencyInversionPrinciple.Solution.Mappers;
 
 public static class AccountTypeAnalisyMappers
 {
-    public static AccountTypeAnalisy MapToAnalisy(this AccountEntity accountEntity, CreateAccountIspSolutionInput input) 
+    public static AccountTypeAnalisy MapToAnalisy(this AccountEntity accountEntity, CreateAccountDipSolutionInput input) 
     {
         return new AccountTypeAnalisy(input, accountEntity);
     }

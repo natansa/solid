@@ -23,7 +23,7 @@ public class CreateAccountUseCase : ICreateAccountUseCase
         _accountService = new AccountService(new AccountRepository(), new AccountRepository());
     }
 
-    public CreateAccountIspSolutionOutput Create(CreateAccountIspSolutionInput input)
+    public CreateAccountDipViolationOutput Create(CreateAccountDipViolationInput input)
     {
         var successCreatedPhysicalPerson = _personService.Create(input);
         var successCreatedAccount = _accountService.Create(input.MapToAccountEntity());

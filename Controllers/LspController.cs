@@ -2,23 +2,22 @@ using Microsoft.AspNetCore.Mvc;
 using SolutionUseCases = Api.LiskovSubstitutionPrinciple.Solution.UseCases;
 using SolutionInput = Api.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
 
-namespace Api.Controllers
+namespace Api.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+public class LspController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class LspController : ControllerBase
+    private readonly SolutionUseCases.CreateAccountUseCase _createAccountUseCaseSolution;
+
+    public LspController()
     {
-        private readonly SolutionUseCases.CreateAccountUseCase _createAccountUseCaseSolution;
+        _createAccountUseCaseSolution = new SolutionUseCases.CreateAccountUseCase();
+    }
 
-        public LspController()
-        {
-            _createAccountUseCaseSolution = new SolutionUseCases.CreateAccountUseCase();
-        }
-
-        [HttpPost("Solution")]
-        public void CreateAccountSolution(SolutionInput.CreateAccountLspSolutionInput createAccountInput)
-        {
-            _createAccountUseCaseSolution.Create(createAccountInput);
-        }
+    [HttpPost("Solution")]
+    public void CreateAccountSolution(SolutionInput.CreateAccountLspSolutionInput createAccountInput)
+    {
+        _createAccountUseCaseSolution.Create(createAccountInput);
     }
 }

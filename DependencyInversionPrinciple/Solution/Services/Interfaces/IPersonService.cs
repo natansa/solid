@@ -4,5 +4,5 @@ namespace Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
 
 public interface IPersonService
 {
-    bool Create(CreateAccountIspSolutionInput input);
+    bool Create(CreateAccountDipSolutionInput input);
 }

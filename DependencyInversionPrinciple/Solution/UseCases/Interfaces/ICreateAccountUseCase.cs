@@ -4,5 +4,5 @@ namespace Api.DependencyInversionPrinciple.Solution.UseCases.Interfaces;
 
 public interface ICreateAccountUseCase
 {
-    CreateAccountIspSolutionOutput Create(CreateAccountIspSolutionInput input);
+    CreateAccountDipSolutionOutput Create(CreateAccountDipSolutionInput input);
 }

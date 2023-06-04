@@ -1,8 +1,8 @@
 ﻿namespace Api.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
 
-public class CreateAccountIspSolutionOutput
+public class CreateAccountDipViolationOutput
 {
-    public CreateAccountIspSolutionOutput(string accountNumber)
+    public CreateAccountDipViolationOutput(string accountNumber)
     {
         AccountNumber = accountNumber;
     }

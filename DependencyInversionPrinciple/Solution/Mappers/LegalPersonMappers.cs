@@ -5,7 +5,7 @@ namespace Api.DependencyInversionPrinciple.Solution.Mappers;
 
 public static class LegalPersonMappers
 {
-    public static LegalPersonEntity MapToLegalPersonEntity(this CreateAccountIspSolutionInput input) 
+    public static LegalPersonEntity MapToLegalPersonEntity(this CreateAccountDipSolutionInput input) 
     {
         return new LegalPersonEntity
         (

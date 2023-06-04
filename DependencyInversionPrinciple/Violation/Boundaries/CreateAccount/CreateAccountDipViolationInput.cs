@@ -1,6 +1,6 @@
-﻿namespace Api.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
+﻿namespace Api.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
 
-public class CreateAccountIspSolutionInput
+public class CreateAccountDipViolationInput
 {
     public string Name { get; set; }
     public DateTime Birthday { get; set; }

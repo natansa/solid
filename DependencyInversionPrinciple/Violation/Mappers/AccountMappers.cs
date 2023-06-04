@@ -7,7 +7,7 @@ namespace Api.DependencyInversionPrinciple.Violation.Mappers;
 
 public static class AccountMappers
 {
-    public static AccountEntity MapToAccountEntity(this CreateAccountIspSolutionInput input) 
+    public static AccountEntity MapToAccountEntity(this CreateAccountDipViolationInput input) 
     {
         return new AccountEntity
         (
@@ -16,9 +16,9 @@ public static class AccountMappers
         );
     }
 
-    public static CreateAccountIspSolutionOutput MapToOutput(this AccountEntity accountEntity) 
+    public static CreateAccountDipViolationOutput MapToOutput(this AccountEntity accountEntity) 
     {
-        return new CreateAccountIspSolutionOutput(accountEntity.AccountNumber);
+        return new CreateAccountDipViolationOutput(accountEntity.AccountNumber);
     }
 
     public static AccountEntity MapToAccountEntity(this GetAccountBalanceInput input)

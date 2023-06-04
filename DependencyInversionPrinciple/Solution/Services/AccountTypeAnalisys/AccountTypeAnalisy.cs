@@ -5,12 +5,12 @@ namespace Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys
 
 public class AccountTypeAnalisy
 {
-    public AccountTypeAnalisy(CreateAccountIspSolutionInput input, AccountEntity accountEntity)
+    public AccountTypeAnalisy(CreateAccountDipSolutionInput input, AccountEntity accountEntity)
     {
         Input = input;
         AccountEntity = accountEntity;
     }
 
-    public CreateAccountIspSolutionInput Input { get; }
+    public CreateAccountDipSolutionInput Input { get; }
     public AccountEntity AccountEntity { get; }
 }

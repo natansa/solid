@@ -5,7 +5,7 @@ namespace Api.DependencyInversionPrinciple.Violation.Mappers;
 
 public static class CpfMappers
 {
-    public static CpfValueObject MapToCpf(this CreateAccountIspSolutionInput input) 
+    public static CpfValueObject MapToCpf(this CreateAccountDipViolationInput input) 
     {
         return new CpfValueObject(input.Document);
     }

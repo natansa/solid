@@ -1,7 +1,5 @@
 ﻿using Api.DependencyInversionPrinciple.Solution.Boundaries.GetAccountBalance;
 using Api.DependencyInversionPrinciple.Solution.Mappers;
-using Api.DependencyInversionPrinciple.Solution.Repository;
-using Api.DependencyInversionPrinciple.Solution.Services;
 using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
 using Api.DependencyInversionPrinciple.Solution.UseCases.Interfaces;
 
@@ -11,9 +9,9 @@ public class GetAccountBalanceUseCase : IGetAccountBalanceUseCase
 {
     private readonly IAccountService _accountService;
 
-    public GetAccountBalanceUseCase()
+    public GetAccountBalanceUseCase(IAccountService accountService)
     {
-        _accountService = new AccountService(new AccountRepository(), new AccountRepository());
+        _accountService = accountService;
     }
 
     public GetAccountBalanceOutput GetAccountBalance(GetAccountBalanceInput input)

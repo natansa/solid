@@ -5,7 +5,7 @@ namespace Api.DependencyInversionPrinciple.Solution.Mappers;
 
 public static class PhysicalPersonMappers
 {
-    public static PhysicalPersonEntity MapToPhysicalPersonEntity(this CreateAccountIspSolutionInput input) 
+    public static PhysicalPersonEntity MapToPhysicalPersonEntity(this CreateAccountDipSolutionInput input) 
     {
         return new PhysicalPersonEntity
         (

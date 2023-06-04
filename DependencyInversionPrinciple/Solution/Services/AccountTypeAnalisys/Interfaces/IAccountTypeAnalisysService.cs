@@ -1,5 +1,4 @@
 ﻿using Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
-using Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
 
 namespace Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys.Interfaces;
 

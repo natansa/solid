@@ -2,22 +2,21 @@
 using Api.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
 using Api.DependencyInversionPrinciple.Solution.Enums;
 using Api.DependencyInversionPrinciple.Solution.Mappers;
-using Api.DependencyInversionPrinciple.Solution.Repository;
 
 namespace Api.DependencyInversionPrinciple.Solution.Services;
 
 public class PersonService : IPersonService
 {
-    private readonly PhysicalPersonService _physicalPersonService;
-    private readonly LegalPersonService _legalPersonService;
+    private readonly IPhysicalPersonService _physicalPersonService;
+    private readonly ILegalPersonService _legalPersonService;
 
-    public PersonService()
+    public PersonService(IPhysicalPersonService physicalPersonService, ILegalPersonService legalPersonService)
     {
-        _physicalPersonService = new PhysicalPersonService(new PhysicalPersonRepository(), new PhysicalPersonRepository());
-        _legalPersonService = new LegalPersonService(new LegalPersonRepository(), new LegalPersonRepository());
+        _physicalPersonService = physicalPersonService;
+        _legalPersonService = legalPersonService;
     }
 
-    public bool Create(CreateAccountIspSolutionInput input) 
+    public bool Create(CreateAccountDipSolutionInput input) 
     {
         Dictionary<AccountType, Func<bool>> personsService = new Dictionary<AccountType, Func<bool>>
         {

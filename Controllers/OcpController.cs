@@ -4,31 +4,30 @@ using ViolationInput = Api.OpenClosedPrinciple.Violation.Boundaries.CreateAccoun
 using SolutionUseCases = Api.OpenClosedPrinciple.Solution.UseCases;
 using SolutionInput = Api.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
 
-namespace Api.Controllers
+namespace Api.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+public class OcpController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class OcpController : ControllerBase
+    private readonly ViolationUseCases.CreateAccountUseCase _createAccountUseCaseViolation;
+    private readonly SolutionUseCases.CreateAccountUseCase _createAccountUseCaseSolution;
+
+    public OcpController()
     {
-        private readonly ViolationUseCases.CreateAccountUseCase _createAccountUseCaseViolation;
-        private readonly SolutionUseCases.CreateAccountUseCase _createAccountUseCaseSolution;
+        _createAccountUseCaseViolation = new ViolationUseCases.CreateAccountUseCase();
+        _createAccountUseCaseSolution = new SolutionUseCases.CreateAccountUseCase();
+    }
 
-        public OcpController()
-        {
-            _createAccountUseCaseViolation = new ViolationUseCases.CreateAccountUseCase();
-            _createAccountUseCaseSolution = new SolutionUseCases.CreateAccountUseCase();
-        }
+    [HttpPost("Violation")]
+    public void CreateAccountViolation(ViolationInput.CreateAccountOcpViolationInput createAccountInput)
+    {
+        _createAccountUseCaseViolation.Create(createAccountInput);
+    }
 
-        [HttpPost("Violation")]
-        public void CreateAccountViolation(ViolationInput.CreateAccountOcpViolationInput createAccountInput)
-        {
-            _createAccountUseCaseViolation.Create(createAccountInput);
-        }
-
-        [HttpPost("Solution")]
-        public void CreateAccountSolution(SolutionInput.CreateAccountOcpSolutionInput createAccountInput)
-        {
-            _createAccountUseCaseSolution.Create(createAccountInput);
-        }
+    [HttpPost("Solution")]
+    public void CreateAccountSolution(SolutionInput.CreateAccountOcpSolutionInput createAccountInput)
+    {
+        _createAccountUseCaseSolution.Create(createAccountInput);
     }
 }
