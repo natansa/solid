@@ -1,7 +1,7 @@
-﻿using SOLID.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
-using SOLID.DependencyInversionPrinciple.Violation.ValueObjects;
+﻿using Api.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
+using Api.DependencyInversionPrinciple.Violation.ValueObjects;
 
-namespace SOLID.DependencyInversionPrinciple.Violation.Mappers;
+namespace Api.DependencyInversionPrinciple.Violation.Mappers;
 
 public static class DocumentMappers
 {

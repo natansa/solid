@@ -1,4 +1,4 @@
-﻿namespace SOLID.LiskovSubstitutionPrinciple.Solution.Services;
+﻿namespace Api.LiskovSubstitutionPrinciple.Solution.Services;
 
 public class ComplianceService
 {

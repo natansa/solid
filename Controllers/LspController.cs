@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using SolutionUseCases = SOLID.LiskovSubstitutionPrinciple.Solution.UseCases;
-using SolutionInput = SOLID.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
+using SolutionUseCases = Api.LiskovSubstitutionPrinciple.Solution.UseCases;
+using SolutionInput = Api.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
 
 namespace Api.Controllers
 {

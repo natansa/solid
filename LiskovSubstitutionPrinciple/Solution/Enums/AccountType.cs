@@ -1,4 +1,4 @@
-﻿namespace SOLID.LiskovSubstitutionPrinciple.Solution.Enums;
+﻿namespace Api.LiskovSubstitutionPrinciple.Solution.Enums;
 
 public enum AccountType
 {

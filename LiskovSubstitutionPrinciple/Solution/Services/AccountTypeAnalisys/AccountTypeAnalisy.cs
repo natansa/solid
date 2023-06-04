@@ -1,7 +1,7 @@
-﻿using SOLID.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.LiskovSubstitutionPrinciple.Solution.Entities;
+﻿using Api.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
+using Api.LiskovSubstitutionPrinciple.Solution.Entities;
 
-namespace SOLID.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys;
+namespace Api.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys;
 
 public class AccountTypeAnalisy
 {

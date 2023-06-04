@@ -1,4 +1,4 @@
-﻿namespace SOLID.OpenClosedPrinciple.Solution.Services;
+﻿namespace Api.OpenClosedPrinciple.Solution.Services;
 
 public class ComplianceService
 {

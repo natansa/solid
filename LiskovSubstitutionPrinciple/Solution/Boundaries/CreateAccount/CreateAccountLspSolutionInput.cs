@@ -1,4 +1,4 @@
-﻿namespace SOLID.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
+﻿namespace Api.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
 
 public class CreateAccountLspSolutionInput
 {

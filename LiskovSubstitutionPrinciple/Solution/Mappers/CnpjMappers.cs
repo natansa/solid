@@ -1,7 +1,7 @@
-﻿using SOLID.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.LiskovSubstitutionPrinciple.Solution.ValueObjects;
+﻿using Api.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
+using Api.LiskovSubstitutionPrinciple.Solution.ValueObjects;
 
-namespace SOLID.LiskovSubstitutionPrinciple.Solution.Mappers;
+namespace Api.LiskovSubstitutionPrinciple.Solution.Mappers;
 
 public static class CnpjMappers
 {

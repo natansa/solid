@@ -1,5 +1,5 @@
-﻿using SOLID.LiskovSubstitutionPrinciple.Solution.Services;
-using SOLID.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using Api.LiskovSubstitutionPrinciple.Solution.Services;
+using Api.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys;
 
 namespace Api.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
 

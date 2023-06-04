@@ -1,7 +1,7 @@
-﻿using SOLID.DependencyInversionPrinciple.Solution.Services.Interfaces;
-using SOLID.DependencyInversionPrinciple.Solution.Services.Interfaces.AccountTypeAnalisys;
+﻿using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
+using Api.DependencyInversionPrinciple.Solution.Services.Interfaces.AccountTypeAnalisys;
 
-namespace SOLID.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
+namespace Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
 
 public class CorporateAccountHandler : AccountTypeAnalisyHandler, ICorporateAccountHandler
 {

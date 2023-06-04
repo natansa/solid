@@ -1,6 +1,6 @@
-﻿using SOLID.OpenClosedPrinciple.Solution.Entities;
+﻿using Api.OpenClosedPrinciple.Solution.Entities;
 
-namespace SOLID.OpenClosedPrinciple.Solution.Repository;
+namespace Api.OpenClosedPrinciple.Solution.Repository;
 
 public class AccountRepository
 {

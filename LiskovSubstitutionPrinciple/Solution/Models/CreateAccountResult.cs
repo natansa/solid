@@ -1,4 +1,4 @@
-﻿using SOLID.LiskovSubstitutionPrinciple.Solution.Entities;
+﻿using Api.LiskovSubstitutionPrinciple.Solution.Entities;
 
 namespace Api.LiskovSubstitutionPrinciple.Solution.Models
 {

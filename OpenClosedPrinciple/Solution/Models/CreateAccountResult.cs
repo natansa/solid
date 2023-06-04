@@ -1,4 +1,4 @@
-﻿using SOLID.OpenClosedPrinciple.Solution.Entities;
+﻿using Api.OpenClosedPrinciple.Solution.Entities;
 
 namespace Api.OpenClosedPrinciple.Solution.Models
 {

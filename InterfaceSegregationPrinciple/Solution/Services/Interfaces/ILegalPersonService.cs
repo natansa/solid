@@ -1,4 +1,4 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Solution.Entities;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Entities;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 

@@ -1,4 +1,4 @@
-﻿using SOLID.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
 
 namespace Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
 

@@ -1,11 +1,11 @@
 ﻿using Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
-using SOLID.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.OpenClosedPrinciple.Solution.Mappers;
-using SOLID.OpenClosedPrinciple.Solution.Repository;
-using SOLID.OpenClosedPrinciple.Solution.Services;
-using SOLID.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
+using Api.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
+using Api.OpenClosedPrinciple.Solution.Mappers;
+using Api.OpenClosedPrinciple.Solution.Repository;
+using Api.OpenClosedPrinciple.Solution.Services;
+using Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
 
-namespace SOLID.OpenClosedPrinciple.Solution.UseCases;
+namespace Api.OpenClosedPrinciple.Solution.UseCases;
 
 public class CreateAccountUseCase
 {

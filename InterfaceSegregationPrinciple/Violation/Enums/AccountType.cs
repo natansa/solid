@@ -1,4 +1,4 @@
-﻿namespace SOLID.InterfaceSegregationPrinciple.Violation.Enums;
+﻿namespace Api.InterfaceSegregationPrinciple.Violation.Enums;
 
 public enum AccountType
 {

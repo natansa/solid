@@ -1,11 +1,11 @@
-﻿using SOLID.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
-using SOLID.DependencyInversionPrinciple.Violation.Mappers;
-using SOLID.DependencyInversionPrinciple.Violation.Repository;
-using SOLID.DependencyInversionPrinciple.Violation.Services;
-using SOLID.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys;
-using SOLID.DependencyInversionPrinciple.Violation.Services.Interfaces;
+﻿using Api.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
+using Api.DependencyInversionPrinciple.Violation.Mappers;
+using Api.DependencyInversionPrinciple.Violation.Repository;
+using Api.DependencyInversionPrinciple.Violation.Services;
+using Api.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys;
+using Api.DependencyInversionPrinciple.Violation.Services.Interfaces;
 
-namespace SOLID.DependencyInversionPrinciple.Violation.UseCases;
+namespace Api.DependencyInversionPrinciple.Violation.UseCases;
 
 public class CreateAccountUseCase
 {

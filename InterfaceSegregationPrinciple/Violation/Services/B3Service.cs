@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-
-namespace SOLID.InterfaceSegregationPrinciple.Violation.Services;
+﻿namespace Api.InterfaceSegregationPrinciple.Violation.Services;
 
 public class B3Service
 {

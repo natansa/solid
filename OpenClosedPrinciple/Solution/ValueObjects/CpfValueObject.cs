@@ -1,4 +1,4 @@
-﻿namespace SOLID.OpenClosedPrinciple.Solution.ValueObjects
+﻿namespace Api.OpenClosedPrinciple.Solution.ValueObjects
 {
     public class CpfValueObject
     {

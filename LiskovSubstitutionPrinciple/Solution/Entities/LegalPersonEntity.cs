@@ -1,6 +1,6 @@
-﻿using SOLID.LiskovSubstitutionPrinciple.Solution.ValueObjects;
+﻿using Api.LiskovSubstitutionPrinciple.Solution.ValueObjects;
 
-namespace SOLID.LiskovSubstitutionPrinciple.Solution.Entities;
+namespace Api.LiskovSubstitutionPrinciple.Solution.Entities;
 
 public class LegalPersonEntity : PersonEntity
 {

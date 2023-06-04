@@ -1,4 +1,4 @@
-﻿namespace SOLID.DependencyInversionPrinciple.Violation.Enums;
+﻿namespace Api.DependencyInversionPrinciple.Violation.Enums;
 
 public enum AccountType
 {

@@ -1,7 +1,7 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.InterfaceSegregationPrinciple.Solution.Entities;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
+using Api.InterfaceSegregationPrinciple.Solution.Entities;
 
-namespace SOLID.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
+namespace Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
 
 public class AccountTypeAnalisy
 {

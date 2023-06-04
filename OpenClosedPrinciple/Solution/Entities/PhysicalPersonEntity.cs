@@ -1,6 +1,6 @@
-﻿using SOLID.OpenClosedPrinciple.Solution.ValueObjects;
+﻿using Api.OpenClosedPrinciple.Solution.ValueObjects;
 
-namespace SOLID.OpenClosedPrinciple.Solution.Entities;
+namespace Api.OpenClosedPrinciple.Solution.Entities;
 
 public class PhysicalPersonEntity
 {

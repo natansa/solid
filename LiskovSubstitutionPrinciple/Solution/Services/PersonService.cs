@@ -1,9 +1,9 @@
-﻿using SOLID.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.LiskovSubstitutionPrinciple.Solution.Enums;
-using SOLID.LiskovSubstitutionPrinciple.Solution.Mappers;
-using SOLID.LiskovSubstitutionPrinciple.Solution.Repository;
+﻿using Api.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
+using Api.LiskovSubstitutionPrinciple.Solution.Enums;
+using Api.LiskovSubstitutionPrinciple.Solution.Mappers;
+using Api.LiskovSubstitutionPrinciple.Solution.Repository;
 
-namespace SOLID.LiskovSubstitutionPrinciple.Solution.Services;
+namespace Api.LiskovSubstitutionPrinciple.Solution.Services;
 
 public class PersonService
 {

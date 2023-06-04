@@ -1,7 +1,7 @@
-﻿using SOLID.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.DependencyInversionPrinciple.Solution.Entities;
+﻿using Api.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
+using Api.DependencyInversionPrinciple.Solution.Entities;
 
-namespace SOLID.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
+namespace Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
 
 public class AccountTypeAnalisy
 {

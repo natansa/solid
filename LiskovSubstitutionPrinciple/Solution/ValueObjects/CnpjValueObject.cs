@@ -1,4 +1,4 @@
-﻿namespace SOLID.LiskovSubstitutionPrinciple.Solution.ValueObjects;
+﻿namespace Api.LiskovSubstitutionPrinciple.Solution.ValueObjects;
 
 public class CnpjValueObject
 {

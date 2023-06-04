@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace SOLID.SingleResponsibilityPrinciple.Solution.Entities;
+namespace Api.SingleResponsibilityPrinciple.Solution.Entities;
 
 public class AccountEntity
 {

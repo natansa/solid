@@ -1,7 +1,7 @@
-﻿using SOLID.LiskovSubstitutionPrinciple.Solution.Entities;
-using SOLID.LiskovSubstitutionPrinciple.Solution.Repository;
+﻿using Api.LiskovSubstitutionPrinciple.Solution.Entities;
+using Api.LiskovSubstitutionPrinciple.Solution.Repository;
 
-namespace SOLID.LiskovSubstitutionPrinciple.Solution.Services;
+namespace Api.LiskovSubstitutionPrinciple.Solution.Services;
 
 public class PhysicalPersonService
 {

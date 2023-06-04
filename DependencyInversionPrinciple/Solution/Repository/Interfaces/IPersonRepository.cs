@@ -1,6 +1,6 @@
-﻿using SOLID.DependencyInversionPrinciple.Solution.Entities;
+﻿using Api.DependencyInversionPrinciple.Solution.Entities;
 
-namespace SOLID.DependencyInversionPrinciple.Solution.Repository.Interfaces
+namespace Api.DependencyInversionPrinciple.Solution.Repository.Interfaces
 {
     public interface IPersonRepository
     {

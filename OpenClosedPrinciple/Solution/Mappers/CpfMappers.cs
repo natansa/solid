@@ -1,7 +1,7 @@
-﻿using SOLID.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.OpenClosedPrinciple.Solution.ValueObjects;
+﻿using Api.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
+using Api.OpenClosedPrinciple.Solution.ValueObjects;
 
-namespace SOLID.OpenClosedPrinciple.Solution.Mappers;
+namespace Api.OpenClosedPrinciple.Solution.Mappers;
 
 public static class CpfMappers
 {

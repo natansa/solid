@@ -1,6 +1,6 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Solution.ValueObjects;
+﻿using Api.InterfaceSegregationPrinciple.Solution.ValueObjects;
 
-namespace SOLID.InterfaceSegregationPrinciple.Solution.Entities;
+namespace Api.InterfaceSegregationPrinciple.Solution.Entities;
 
 public class PhysicalPersonEntity : PersonEntity
 {

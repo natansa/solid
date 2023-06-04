@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace SOLID.SingleResponsibilityPrinciple.Solution.Services
+namespace Api.SingleResponsibilityPrinciple.Solution.Services
 {
     public class SmsService
     {

@@ -1,9 +1,9 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
-using SOLID.InterfaceSegregationPrinciple.Violation.Enums;
-using SOLID.InterfaceSegregationPrinciple.Violation.Mappers;
-using SOLID.InterfaceSegregationPrinciple.Violation.Repository;
+﻿using Api.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
+using Api.InterfaceSegregationPrinciple.Violation.Enums;
+using Api.InterfaceSegregationPrinciple.Violation.Mappers;
+using Api.InterfaceSegregationPrinciple.Violation.Repository;
 
-namespace SOLID.InterfaceSegregationPrinciple.Violation.Services;
+namespace Api.InterfaceSegregationPrinciple.Violation.Services;
 
 public class PersonService
 {

@@ -1,6 +1,6 @@
-﻿using SOLID.OpenClosedPrinciple.Violation.Entities;
+﻿using Api.OpenClosedPrinciple.Violation.Entities;
 
-namespace SOLID.OpenClosedPrinciple.Violation.Repository;
+namespace Api.OpenClosedPrinciple.Violation.Repository;
 
 public class PhysicalPersonRepository
 {

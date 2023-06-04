@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace SOLID.OpenClosedPrinciple.Violation.Services
+namespace Api.OpenClosedPrinciple.Violation.Services
 {
     public class ComplianceService
     {

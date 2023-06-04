@@ -1,5 +1,5 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Solution.Services;
-using SOLID.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Services;
+using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
 

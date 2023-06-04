@@ -1,11 +1,11 @@
-﻿using SOLID.OpenClosedPrinciple.Violation.Boundaries.CreateAccount;
-using SOLID.OpenClosedPrinciple.Violation.Entities;
-using SOLID.OpenClosedPrinciple.Violation.Enums;
-using SOLID.OpenClosedPrinciple.Violation.Repository;
-using SOLID.OpenClosedPrinciple.Violation.Services;
-using SOLID.OpenClosedPrinciple.Violation.ValueObjects;
+﻿using Api.OpenClosedPrinciple.Violation.Boundaries.CreateAccount;
+using Api.OpenClosedPrinciple.Violation.Entities;
+using Api.OpenClosedPrinciple.Violation.Enums;
+using Api.OpenClosedPrinciple.Violation.Repository;
+using Api.OpenClosedPrinciple.Violation.Services;
+using Api.OpenClosedPrinciple.Violation.ValueObjects;
 
-namespace SOLID.OpenClosedPrinciple.Violation.UseCases;
+namespace Api.OpenClosedPrinciple.Violation.UseCases;
 
 public class CreateAccountUseCase
 {

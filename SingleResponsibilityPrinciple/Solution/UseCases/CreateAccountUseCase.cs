@@ -1,10 +1,10 @@
-﻿using SOLID.SingleResponsibilityPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.SingleResponsibilityPrinciple.Solution.Entities;
-using SOLID.SingleResponsibilityPrinciple.Solution.Repository;
-using SOLID.SingleResponsibilityPrinciple.Solution.Services;
-using SOLID.SingleResponsibilityPrinciple.Solution.ValueObjects;
+﻿using Api.SingleResponsibilityPrinciple.Solution.Boundaries.CreateAccount;
+using Api.SingleResponsibilityPrinciple.Solution.Entities;
+using Api.SingleResponsibilityPrinciple.Solution.Repository;
+using Api.SingleResponsibilityPrinciple.Solution.Services;
+using Api.SingleResponsibilityPrinciple.Solution.ValueObjects;
 
-namespace SOLID.SingleResponsibilityPrinciple.Solution.UseCases;
+namespace Api.SingleResponsibilityPrinciple.Solution.UseCases;
 
 public class CreateAccountUseCase
 {

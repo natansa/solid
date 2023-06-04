@@ -1,4 +1,4 @@
-﻿namespace SOLID.DependencyInversionPrinciple.Solution.ValueObjects
+﻿namespace Api.DependencyInversionPrinciple.Solution.ValueObjects
 {
     public class CpfValueObject
     {

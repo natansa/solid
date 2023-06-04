@@ -1,6 +1,6 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
-using SOLID.InterfaceSegregationPrinciple.Violation.Entities;
-using SOLID.InterfaceSegregationPrinciple.Violation.Enums;
+﻿using Api.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
+using Api.InterfaceSegregationPrinciple.Violation.Entities;
+using Api.InterfaceSegregationPrinciple.Violation.Enums;
 
 namespace SOLID.InterfaceSegregationPrinciple.Violation.Mappers;
 

@@ -2,7 +2,7 @@
 using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.Interfaces;
 using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
 
-namespace SOLID.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
+namespace Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
 
 public class AccountTypeAnalisysService : IAccountTypeAnalisysService
 {

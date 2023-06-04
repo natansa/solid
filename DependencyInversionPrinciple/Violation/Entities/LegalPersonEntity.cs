@@ -1,6 +1,6 @@
-﻿using SOLID.DependencyInversionPrinciple.Violation.ValueObjects;
+﻿using Api.DependencyInversionPrinciple.Violation.ValueObjects;
 
-namespace SOLID.DependencyInversionPrinciple.Violation.Entities;
+namespace Api.DependencyInversionPrinciple.Violation.Entities;
 
 public class LegalPersonEntity : PersonEntity
 {

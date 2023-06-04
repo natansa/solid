@@ -1,4 +1,4 @@
-﻿namespace SOLID.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
+﻿namespace Api.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
 
 public class CreateAccountIspSolutionInput
 {

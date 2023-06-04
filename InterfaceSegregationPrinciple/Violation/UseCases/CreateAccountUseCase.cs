@@ -1,11 +1,12 @@
 ﻿using Api.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys.Strategy;
-using SOLID.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
+using Api.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
+using Api.InterfaceSegregationPrinciple.Violation.Mappers;
+using Api.InterfaceSegregationPrinciple.Violation.Repository;
+using Api.InterfaceSegregationPrinciple.Violation.Services;
+using Api.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys;
 using SOLID.InterfaceSegregationPrinciple.Violation.Mappers;
-using SOLID.InterfaceSegregationPrinciple.Violation.Repository;
-using SOLID.InterfaceSegregationPrinciple.Violation.Services;
-using SOLID.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys;
 
-namespace SOLID.InterfaceSegregationPrinciple.Violation.UseCases;
+namespace Api.InterfaceSegregationPrinciple.Violation.UseCases;
 
 public class CreateAccountUseCase
 {

@@ -1,4 +1,4 @@
-﻿namespace SOLID.DependencyInversionPrinciple.Violation.Services;
+﻿namespace Api.DependencyInversionPrinciple.Violation.Services;
 
 public class SmsService
 {

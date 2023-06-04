@@ -1,7 +1,8 @@
-﻿using Api.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys.ChainsOfResposability;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Services;
+using Api.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys.ChainsOfResposability;
 using Api.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys.Strategy;
 
-namespace SOLID.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys;
+namespace Api.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys;
 
 public class AccountTypeAnalisysService
 {

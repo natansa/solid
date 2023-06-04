@@ -1,6 +1,6 @@
-﻿using SOLID.SingleResponsibilityPrinciple.Solution.ValueObjects;
+﻿using Api.SingleResponsibilityPrinciple.Solution.ValueObjects;
 
-namespace SOLID.SingleResponsibilityPrinciple.Solution.Entities;
+namespace Api.SingleResponsibilityPrinciple.Solution.Entities;
 
 public class PhysicalPersonEntity
 {

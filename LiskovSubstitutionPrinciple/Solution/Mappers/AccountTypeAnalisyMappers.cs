@@ -1,8 +1,8 @@
-﻿using SOLID.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.LiskovSubstitutionPrinciple.Solution.Entities;
-using SOLID.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using Api.LiskovSubstitutionPrinciple.Solution.Boundaries.CreateAccount;
+using Api.LiskovSubstitutionPrinciple.Solution.Entities;
+using Api.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys;
 
-namespace SOLID.LiskovSubstitutionPrinciple.Solution.Mappers;
+namespace Api.LiskovSubstitutionPrinciple.Solution.Mappers;
 
 public static class AccountTypeAnalisyMappers
 {

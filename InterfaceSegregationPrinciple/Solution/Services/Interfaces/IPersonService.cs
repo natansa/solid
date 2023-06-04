@@ -1,4 +1,4 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 

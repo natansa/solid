@@ -1,6 +1,6 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Violation.Entities;
+﻿using Api.InterfaceSegregationPrinciple.Violation.Entities;
 
-namespace SOLID.InterfaceSegregationPrinciple.Violation.Repository;
+namespace Api.InterfaceSegregationPrinciple.Violation.Repository;
 
 public class AccountRepository
 {

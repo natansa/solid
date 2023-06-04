@@ -1,7 +1,7 @@
-﻿using SOLID.OpenClosedPrinciple.Solution.Entities;
-using SOLID.OpenClosedPrinciple.Solution.Repository;
+﻿using Api.OpenClosedPrinciple.Solution.Entities;
+using Api.OpenClosedPrinciple.Solution.Repository;
 
-namespace SOLID.OpenClosedPrinciple.Solution.Services;
+namespace Api.OpenClosedPrinciple.Solution.Services;
 
 public class PhysicalPersonService
 {

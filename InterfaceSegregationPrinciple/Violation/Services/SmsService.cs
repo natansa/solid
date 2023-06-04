@@ -1,4 +1,4 @@
-﻿namespace SOLID.InterfaceSegregationPrinciple.Violation.Services;
+﻿namespace Api.InterfaceSegregationPrinciple.Violation.Services;
 
 public class SmsService
 {

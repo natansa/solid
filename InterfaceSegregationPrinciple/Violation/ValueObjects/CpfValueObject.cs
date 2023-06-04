@@ -1,4 +1,4 @@
-﻿namespace SOLID.InterfaceSegregationPrinciple.Violation.ValueObjects;
+﻿namespace Api.InterfaceSegregationPrinciple.Violation.ValueObjects;
 
 public class CpfValueObject
 {

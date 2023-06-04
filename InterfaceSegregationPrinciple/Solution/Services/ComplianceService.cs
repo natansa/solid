@@ -1,6 +1,6 @@
 ﻿using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 
-namespace SOLID.InterfaceSegregationPrinciple.Solution.Services;
+namespace Api.InterfaceSegregationPrinciple.Solution.Services;
 
 public class ComplianceService : IComplianceService
 {

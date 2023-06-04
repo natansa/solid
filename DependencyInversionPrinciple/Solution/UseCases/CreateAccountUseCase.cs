@@ -1,9 +1,9 @@
-﻿using SOLID.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.DependencyInversionPrinciple.Solution.Mappers;
-using SOLID.DependencyInversionPrinciple.Solution.Services.Interfaces;
-using SOLID.DependencyInversionPrinciple.Solution.UseCases.Interfaces;
+﻿using Api.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
+using Api.DependencyInversionPrinciple.Solution.Mappers;
+using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
+using Api.DependencyInversionPrinciple.Solution.UseCases.Interfaces;
 
-namespace SOLID.DependencyInversionPrinciple.Solution.UseCases;
+namespace Api.DependencyInversionPrinciple.Solution.UseCases;
 
 public class CreateAccountUseCase : ICreateAccountUseCase
 {

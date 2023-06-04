@@ -1,4 +1,4 @@
-﻿namespace SOLID.OpenClosedPrinciple.Violation.ValueObjects
+﻿namespace Api.OpenClosedPrinciple.Violation.ValueObjects
 {
     public class CpfValueObject
     {

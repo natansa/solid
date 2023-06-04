@@ -1,8 +1,8 @@
-﻿using SOLID.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.DependencyInversionPrinciple.Solution.Entities;
-using SOLID.DependencyInversionPrinciple.Solution.ValueObjects;
+﻿using Api.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
+using Api.DependencyInversionPrinciple.Solution.Entities;
+using Api.DependencyInversionPrinciple.Solution.ValueObjects;
 
-namespace SOLID.DependencyInversionPrinciple.Solution.Services.Interfaces;
+namespace Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
 
 public interface IPersonService
 {

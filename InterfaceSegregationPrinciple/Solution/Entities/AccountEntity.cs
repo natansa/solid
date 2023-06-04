@@ -1,7 +1,7 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Solution.Enums;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Enums;
 using System.Text;
 
-namespace SOLID.InterfaceSegregationPrinciple.Solution.Entities;
+namespace Api.InterfaceSegregationPrinciple.Solution.Entities;
 
 public class AccountEntity
 {

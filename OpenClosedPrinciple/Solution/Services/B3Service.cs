@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace SOLID.OpenClosedPrinciple.Solution.Services;
+namespace Api.OpenClosedPrinciple.Solution.Services;
 
 public class B3Service
 {

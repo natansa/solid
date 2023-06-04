@@ -1,4 +1,4 @@
-﻿namespace SOLID.OpenClosedPrinciple.Solution.Enums;
+﻿namespace Api.OpenClosedPrinciple.Solution.Enums;
 
 public enum AccountType
 {

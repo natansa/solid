@@ -1,4 +1,4 @@
-﻿namespace SOLID.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
+﻿namespace Api.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
 
 public class CreateAccountOcpSolutionInput
 {

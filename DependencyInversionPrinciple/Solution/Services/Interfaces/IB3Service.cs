@@ -1,4 +1,4 @@
-﻿namespace SOLID.DependencyInversionPrinciple.Solution.Services.Interfaces
+﻿namespace Api.DependencyInversionPrinciple.Solution.Services.Interfaces
 {
     public interface IB3Service
     {

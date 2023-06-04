@@ -1,4 +1,4 @@
-﻿namespace SOLID.SingleResponsibilityPrinciple.Solution.Boundaries.CreateAccount;
+﻿namespace Api.SingleResponsibilityPrinciple.Solution.Boundaries.CreateAccount;
 
 public class CreateAccountSrpSolutionOutput
 {

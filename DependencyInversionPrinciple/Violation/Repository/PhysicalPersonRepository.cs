@@ -1,7 +1,7 @@
-﻿using SOLID.DependencyInversionPrinciple.Violation.Entities;
-using SOLID.DependencyInversionPrinciple.Violation.ValueObjects;
+﻿using Api.DependencyInversionPrinciple.Violation.Entities;
+using Api.DependencyInversionPrinciple.Violation.ValueObjects;
 
-namespace SOLID.DependencyInversionPrinciple.Violation.Repository;
+namespace Api.DependencyInversionPrinciple.Violation.Repository;
 
 public class PhysicalPersonRepository
 {

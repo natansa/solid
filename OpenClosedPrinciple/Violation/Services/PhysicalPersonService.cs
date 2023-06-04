@@ -1,7 +1,7 @@
-﻿using SOLID.OpenClosedPrinciple.Violation.Entities;
-using SOLID.OpenClosedPrinciple.Violation.Repository;
+﻿using Api.OpenClosedPrinciple.Violation.Entities;
+using Api.OpenClosedPrinciple.Violation.Repository;
 
-namespace SOLID.OpenClosedPrinciple.Violation.Services;
+namespace Api.OpenClosedPrinciple.Violation.Services;
 
 public class PhysicalPersonService
 {

@@ -1,4 +1,4 @@
-﻿namespace SOLID.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
+﻿namespace Api.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
 
 public class CreateAccountInput
 {

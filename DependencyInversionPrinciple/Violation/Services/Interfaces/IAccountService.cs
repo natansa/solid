@@ -1,6 +1,6 @@
-﻿using SOLID.DependencyInversionPrinciple.Violation.Entities;
+﻿using Api.DependencyInversionPrinciple.Violation.Entities;
 
-namespace SOLID.DependencyInversionPrinciple.Violation.Services.Interfaces;
+namespace Api.DependencyInversionPrinciple.Violation.Services.Interfaces;
 
 public interface IAccountService
 {

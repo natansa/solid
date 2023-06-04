@@ -1,5 +1,5 @@
 ﻿using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
-using SOLID.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
+using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.Interfaces;
 

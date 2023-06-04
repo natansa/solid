@@ -1,4 +1,4 @@
-﻿namespace SOLID.SingleResponsibilityPrinciple.Violation.Repository;
+﻿namespace Api.SingleResponsibilityPrinciple.Violation.Repository;
 
 public class PhysicalPersonRepository
 {

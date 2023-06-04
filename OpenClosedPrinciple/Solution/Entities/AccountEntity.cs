@@ -1,7 +1,7 @@
-﻿using SOLID.OpenClosedPrinciple.Solution.Enums;
+﻿using Api.OpenClosedPrinciple.Solution.Enums;
 using System.Text;
 
-namespace SOLID.OpenClosedPrinciple.Solution.Entities;
+namespace Api.OpenClosedPrinciple.Solution.Entities;
 
 public class AccountEntity
 {

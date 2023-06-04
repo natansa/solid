@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using ViolationUseCases = SOLID.OpenClosedPrinciple.Violation.UseCases;
-using ViolationInput = SOLID.OpenClosedPrinciple.Violation.Boundaries.CreateAccount;
-using SolutionUseCases = SOLID.OpenClosedPrinciple.Solution.UseCases;
-using SolutionInput = SOLID.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
+using ViolationUseCases = Api.OpenClosedPrinciple.Violation.UseCases;
+using ViolationInput = Api.OpenClosedPrinciple.Violation.Boundaries.CreateAccount;
+using SolutionUseCases = Api.OpenClosedPrinciple.Solution.UseCases;
+using SolutionInput = Api.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
 
 namespace Api.Controllers
 {

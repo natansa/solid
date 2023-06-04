@@ -1,6 +1,6 @@
-﻿using SOLID.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
 
-namespace SOLID.DependencyInversionPrinciple.Solution.Services.Interfaces;
+namespace Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
 
 public interface IAccountTypeAnalisysService
 {

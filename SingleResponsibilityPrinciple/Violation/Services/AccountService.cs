@@ -1,7 +1,7 @@
-﻿using SOLID.SingleResponsibilityPrinciple.Violation.Entities;
-using SOLID.SingleResponsibilityPrinciple.Violation.Repository;
+﻿using Api.SingleResponsibilityPrinciple.Violation.Entities;
+using Api.SingleResponsibilityPrinciple.Violation.Repository;
 
-namespace SOLID.SingleResponsibilityPrinciple.Violation.Services;
+namespace Api.SingleResponsibilityPrinciple.Violation.Services;
 
 public class AccountService
 {

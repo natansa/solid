@@ -1,4 +1,4 @@
-﻿namespace SOLID.OpenClosedPrinciple.Violation.Boundaries.CreateAccount;
+﻿namespace Api.OpenClosedPrinciple.Violation.Boundaries.CreateAccount;
 
 public class CreateAccountOcpViolationInput
 {

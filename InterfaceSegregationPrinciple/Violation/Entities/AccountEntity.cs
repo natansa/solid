@@ -1,7 +1,7 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Violation.Enums;
+﻿using Api.InterfaceSegregationPrinciple.Violation.Enums;
 using System.Text;
 
-namespace SOLID.InterfaceSegregationPrinciple.Violation.Entities;
+namespace Api.InterfaceSegregationPrinciple.Violation.Entities;
 
 public class AccountEntity
 {

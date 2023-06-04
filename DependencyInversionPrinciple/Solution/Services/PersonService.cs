@@ -1,11 +1,11 @@
-﻿using SOLID.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.DependencyInversionPrinciple.Solution.Entities;
-using SOLID.DependencyInversionPrinciple.Solution.Enums;
-using SOLID.DependencyInversionPrinciple.Solution.Repository.Interfaces;
-using SOLID.DependencyInversionPrinciple.Solution.Services.Interfaces;
-using SOLID.DependencyInversionPrinciple.Solution.ValueObjects;
+﻿using Api.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
+using Api.DependencyInversionPrinciple.Solution.Entities;
+using Api.DependencyInversionPrinciple.Solution.Enums;
+using Api.DependencyInversionPrinciple.Solution.Repository.Interfaces;
+using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
+using Api.DependencyInversionPrinciple.Solution.ValueObjects;
 
-namespace SOLID.DependencyInversionPrinciple.Solution.Services;
+namespace Api.DependencyInversionPrinciple.Solution.Services;
 
 public class PersonService : IPersonService, IPersonQueryService, IPersonCommandService
 {

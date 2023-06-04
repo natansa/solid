@@ -1,4 +1,4 @@
-﻿namespace SOLID.DependencyInversionPrinciple.Solution.Entities;
+﻿namespace Api.DependencyInversionPrinciple.Solution.Entities;
 
 public abstract class PersonEntity
 {

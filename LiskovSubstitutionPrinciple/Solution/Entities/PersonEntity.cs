@@ -1,4 +1,4 @@
-﻿namespace SOLID.LiskovSubstitutionPrinciple.Solution.Entities;
+﻿namespace Api.LiskovSubstitutionPrinciple.Solution.Entities;
 
 public abstract class PersonEntity
 {

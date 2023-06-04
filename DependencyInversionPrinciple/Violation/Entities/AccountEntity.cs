@@ -1,7 +1,7 @@
-﻿using SOLID.DependencyInversionPrinciple.Violation.Enums;
+﻿using Api.DependencyInversionPrinciple.Violation.Enums;
 using System.Text;
 
-namespace SOLID.DependencyInversionPrinciple.Violation.Entities;
+namespace Api.DependencyInversionPrinciple.Violation.Entities;
 
 public class AccountEntity
 {

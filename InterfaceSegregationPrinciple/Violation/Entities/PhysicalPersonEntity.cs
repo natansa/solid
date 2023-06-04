@@ -1,6 +1,6 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Violation.ValueObjects;
+﻿using Api.InterfaceSegregationPrinciple.Violation.ValueObjects;
 
-namespace SOLID.InterfaceSegregationPrinciple.Violation.Entities;
+namespace Api.InterfaceSegregationPrinciple.Violation.Entities;
 
 public class PhysicalPersonEntity : PersonEntity
 {

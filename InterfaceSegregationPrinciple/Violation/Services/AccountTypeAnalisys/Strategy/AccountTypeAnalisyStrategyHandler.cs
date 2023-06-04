@@ -1,4 +1,4 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys;
+﻿using Api.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys;
 
 namespace Api.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys.Strategy
 {

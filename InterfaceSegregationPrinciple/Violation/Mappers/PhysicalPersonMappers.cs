@@ -1,7 +1,7 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
-using SOLID.InterfaceSegregationPrinciple.Violation.Entities;
+﻿using Api.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
+using Api.InterfaceSegregationPrinciple.Violation.Entities;
 
-namespace SOLID.InterfaceSegregationPrinciple.Violation.Mappers;
+namespace Api.InterfaceSegregationPrinciple.Violation.Mappers;
 
 public static class PhysicalPersonMappers
 {

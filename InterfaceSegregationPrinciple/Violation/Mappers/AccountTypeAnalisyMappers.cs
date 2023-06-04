@@ -1,8 +1,8 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
-using SOLID.InterfaceSegregationPrinciple.Violation.Entities;
-using SOLID.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys;
+﻿using Api.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
+using Api.InterfaceSegregationPrinciple.Violation.Entities;
+using Api.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys;
 
-namespace SOLID.InterfaceSegregationPrinciple.Violation.Mappers;
+namespace Api.InterfaceSegregationPrinciple.Violation.Mappers;
 
 public static class AccountTypeAnalisyMappers
 {

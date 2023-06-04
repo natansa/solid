@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using ViolationServices = SOLID.SingleResponsibilityPrinciple.Violation.Services;
-using ViolationEntities = SOLID.SingleResponsibilityPrinciple.Violation.Entities;
-using SolutionUseCases = SOLID.SingleResponsibilityPrinciple.Solution.UseCases;
-using SolutionInput = SOLID.SingleResponsibilityPrinciple.Solution.Boundaries.CreateAccount;
+using ViolationServices = Api.SingleResponsibilityPrinciple.Violation.Services;
+using ViolationEntities = Api.SingleResponsibilityPrinciple.Violation.Entities;
+using SolutionUseCases = Api.SingleResponsibilityPrinciple.Solution.UseCases;
+using SolutionInput = Api.SingleResponsibilityPrinciple.Solution.Boundaries.CreateAccount;
 
 namespace Api.Controllers
 {

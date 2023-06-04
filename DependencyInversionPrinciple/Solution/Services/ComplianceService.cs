@@ -1,6 +1,6 @@
-﻿using SOLID.DependencyInversionPrinciple.Solution.Services.Interfaces;
+﻿using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
 
-namespace SOLID.DependencyInversionPrinciple.Solution.Services;
+namespace Api.DependencyInversionPrinciple.Solution.Services;
 
 public class ComplianceService : IComplianceService
 {

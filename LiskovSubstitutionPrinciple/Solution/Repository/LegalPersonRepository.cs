@@ -1,6 +1,6 @@
-﻿using SOLID.LiskovSubstitutionPrinciple.Solution.Entities;
+﻿using Api.LiskovSubstitutionPrinciple.Solution.Entities;
 
-namespace SOLID.LiskovSubstitutionPrinciple.Solution.Repository;
+namespace Api.LiskovSubstitutionPrinciple.Solution.Repository;
 
 public class LegalPersonRepository
 {

@@ -1,8 +1,8 @@
-﻿using SOLID.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.OpenClosedPrinciple.Solution.Entities;
-using SOLID.OpenClosedPrinciple.Solution.Enums;
+﻿using Api.OpenClosedPrinciple.Solution.Boundaries.CreateAccount;
+using Api.OpenClosedPrinciple.Solution.Entities;
+using Api.OpenClosedPrinciple.Solution.Enums;
 
-namespace SOLID.OpenClosedPrinciple.Solution.Mappers;
+namespace Api.OpenClosedPrinciple.Solution.Mappers;
 
 public static class AccountMappers
 {

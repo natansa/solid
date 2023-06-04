@@ -1,4 +1,4 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Violation.Entities;
+﻿using Api.InterfaceSegregationPrinciple.Violation.Entities;
 
 namespace Api.InterfaceSegregationPrinciple.Violation.Models
 {

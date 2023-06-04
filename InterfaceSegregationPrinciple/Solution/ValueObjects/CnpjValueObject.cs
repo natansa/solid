@@ -1,4 +1,4 @@
-﻿namespace SOLID.InterfaceSegregationPrinciple.Solution.ValueObjects;
+﻿namespace Api.InterfaceSegregationPrinciple.Solution.ValueObjects;
 
 public class CnpjValueObject
 {

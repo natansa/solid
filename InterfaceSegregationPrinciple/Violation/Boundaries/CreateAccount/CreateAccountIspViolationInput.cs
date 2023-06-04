@@ -1,4 +1,4 @@
-﻿namespace SOLID.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
+﻿namespace Api.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
 
 public class CreateAccountIspViolationInput
 {

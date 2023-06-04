@@ -1,4 +1,4 @@
-﻿using SOLID.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using Api.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys;
 
 namespace Api.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys.Strategy
 {

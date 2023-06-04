@@ -1,7 +1,7 @@
 ﻿using Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
 using Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
 
-namespace SOLID.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
+namespace Api.OpenClosedPrinciple.Solution.Services.AccountTypeAnalisys;
 
 public class AccountTypeAnalisysService
 {

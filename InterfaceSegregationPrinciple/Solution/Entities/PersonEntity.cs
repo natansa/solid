@@ -1,4 +1,4 @@
-﻿namespace SOLID.InterfaceSegregationPrinciple.Solution.Entities;
+﻿namespace Api.InterfaceSegregationPrinciple.Solution.Entities;
 
 public abstract class PersonEntity
 {

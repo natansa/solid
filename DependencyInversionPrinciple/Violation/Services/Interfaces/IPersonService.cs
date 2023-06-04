@@ -1,8 +1,8 @@
-﻿using SOLID.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
-using SOLID.DependencyInversionPrinciple.Violation.Entities;
-using SOLID.DependencyInversionPrinciple.Violation.ValueObjects;
+﻿using Api.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
+using Api.DependencyInversionPrinciple.Violation.Entities;
+using Api.DependencyInversionPrinciple.Violation.ValueObjects;
 
-namespace SOLID.DependencyInversionPrinciple.Violation.Services.Interfaces;
+namespace Api.DependencyInversionPrinciple.Violation.Services.Interfaces;
 
 public interface IPersonService
 {

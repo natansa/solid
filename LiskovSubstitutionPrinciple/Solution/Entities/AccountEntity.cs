@@ -1,7 +1,7 @@
-﻿using SOLID.LiskovSubstitutionPrinciple.Solution.Enums;
+﻿using Api.LiskovSubstitutionPrinciple.Solution.Enums;
 using System.Text;
 
-namespace SOLID.LiskovSubstitutionPrinciple.Solution.Entities;
+namespace Api.LiskovSubstitutionPrinciple.Solution.Entities;
 
 public class AccountEntity
 {

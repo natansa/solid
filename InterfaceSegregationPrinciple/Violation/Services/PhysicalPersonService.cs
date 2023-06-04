@@ -1,7 +1,7 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Violation.Entities;
-using SOLID.InterfaceSegregationPrinciple.Violation.Repository;
+﻿using Api.InterfaceSegregationPrinciple.Violation.Entities;
+using Api.InterfaceSegregationPrinciple.Violation.Repository;
 
-namespace SOLID.InterfaceSegregationPrinciple.Violation.Services;
+namespace Api.InterfaceSegregationPrinciple.Violation.Services;
 
 public class PhysicalPersonService
 {

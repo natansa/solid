@@ -1,12 +1,12 @@
 ﻿using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
 using Api.InterfaceSegregationPrinciple.Solution.UseCases.Interfaces;
-using SOLID.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.InterfaceSegregationPrinciple.Solution.Mappers;
-using SOLID.InterfaceSegregationPrinciple.Solution.Repository;
-using SOLID.InterfaceSegregationPrinciple.Solution.Services;
-using SOLID.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
+using Api.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
+using Api.InterfaceSegregationPrinciple.Solution.Mappers;
+using Api.InterfaceSegregationPrinciple.Solution.Repository;
+using Api.InterfaceSegregationPrinciple.Solution.Services;
+using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
 
-namespace SOLID.InterfaceSegregationPrinciple.Solution.UseCases;
+namespace Api.InterfaceSegregationPrinciple.Solution.UseCases;
 
 public class CreateAccountUseCase : ICreateAccountUseCase
 {

@@ -1,6 +1,6 @@
-﻿using SOLID.SingleResponsibilityPrinciple.Solution.Entities;
+﻿using Api.SingleResponsibilityPrinciple.Solution.Entities;
 
-namespace SOLID.SingleResponsibilityPrinciple.Solution.Repository;
+namespace Api.SingleResponsibilityPrinciple.Solution.Repository;
 
 public class PhysicalPersonRepository
 {

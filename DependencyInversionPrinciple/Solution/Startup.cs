@@ -1,14 +1,14 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using SOLID.DependencyInversionPrinciple.Solution.Repository;
-using SOLID.DependencyInversionPrinciple.Solution.Repository.Interfaces;
-using SOLID.DependencyInversionPrinciple.Solution.Services;
-using SOLID.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
-using SOLID.DependencyInversionPrinciple.Solution.Services.Interfaces;
-using SOLID.DependencyInversionPrinciple.Solution.Services.Interfaces.AccountTypeAnalisys;
-using SOLID.DependencyInversionPrinciple.Solution.UseCases;
-using SOLID.DependencyInversionPrinciple.Solution.UseCases.Interfaces;
+using Api.DependencyInversionPrinciple.Solution.Repository;
+using Api.DependencyInversionPrinciple.Solution.Repository.Interfaces;
+using Api.DependencyInversionPrinciple.Solution.Services;
+using Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
+using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
+using Api.DependencyInversionPrinciple.Solution.Services.Interfaces.AccountTypeAnalisys;
+using Api.DependencyInversionPrinciple.Solution.UseCases;
+using Api.DependencyInversionPrinciple.Solution.UseCases.Interfaces;
 
-namespace SOLID.DependencyInversionPrinciple.Solution;
+namespace Api.DependencyInversionPrinciple.Solution;
 
 public class Startup
 {

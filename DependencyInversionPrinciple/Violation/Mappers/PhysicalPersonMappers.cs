@@ -1,7 +1,7 @@
-﻿using SOLID.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
-using SOLID.DependencyInversionPrinciple.Violation.Entities;
+﻿using Api.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
+using Api.DependencyInversionPrinciple.Violation.Entities;
 
-namespace SOLID.DependencyInversionPrinciple.Violation.Mappers;
+namespace Api.DependencyInversionPrinciple.Violation.Mappers;
 
 public static class PhysicalPersonMappers
 {

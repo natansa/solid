@@ -1,7 +1,7 @@
 ﻿using Api.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
 using Api.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
 
-namespace SOLID.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys;
+namespace Api.LiskovSubstitutionPrinciple.Solution.Services.AccountTypeAnalisys;
 
 public class AccountTypeAnalisysService
 {

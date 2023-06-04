@@ -1,10 +1,10 @@
 ﻿using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
-using SOLID.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.InterfaceSegregationPrinciple.Solution.Enums;
-using SOLID.InterfaceSegregationPrinciple.Solution.Mappers;
-using SOLID.InterfaceSegregationPrinciple.Solution.Repository;
+using Api.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
+using Api.InterfaceSegregationPrinciple.Solution.Enums;
+using Api.InterfaceSegregationPrinciple.Solution.Mappers;
+using Api.InterfaceSegregationPrinciple.Solution.Repository;
 
-namespace SOLID.InterfaceSegregationPrinciple.Solution.Services;
+namespace Api.InterfaceSegregationPrinciple.Solution.Services;
 
 public class PersonService : IPersonService
 {

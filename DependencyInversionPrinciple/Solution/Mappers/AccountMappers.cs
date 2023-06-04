@@ -1,8 +1,8 @@
-﻿using SOLID.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.DependencyInversionPrinciple.Solution.Entities;
-using SOLID.DependencyInversionPrinciple.Solution.Enums;
+﻿using Api.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
+using Api.DependencyInversionPrinciple.Solution.Entities;
+using Api.DependencyInversionPrinciple.Solution.Enums;
 
-namespace SOLID.DependencyInversionPrinciple.Solution.Mappers;
+namespace Api.DependencyInversionPrinciple.Solution.Mappers;
 
 public static class AccountMappers
 {

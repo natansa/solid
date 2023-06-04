@@ -1,4 +1,4 @@
-﻿namespace SOLID.DependencyInversionPrinciple.Violation.ValueObjects
+﻿namespace Api.DependencyInversionPrinciple.Violation.ValueObjects
 {
     public class CnpjValueObject
     {

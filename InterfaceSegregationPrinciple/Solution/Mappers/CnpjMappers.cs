@@ -1,7 +1,7 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
-using SOLID.InterfaceSegregationPrinciple.Solution.ValueObjects;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
+using Api.InterfaceSegregationPrinciple.Solution.ValueObjects;
 
-namespace SOLID.InterfaceSegregationPrinciple.Solution.Mappers;
+namespace Api.InterfaceSegregationPrinciple.Solution.Mappers;
 
 public static class CnpjMappers
 {

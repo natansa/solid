@@ -1,9 +1,9 @@
 ﻿using Api.InterfaceSegregationPrinciple.Solution.Models;
 using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
-using SOLID.InterfaceSegregationPrinciple.Solution.Entities;
-using SOLID.InterfaceSegregationPrinciple.Solution.Repository;
+using Api.InterfaceSegregationPrinciple.Solution.Entities;
+using Api.InterfaceSegregationPrinciple.Solution.Repository;
 
-namespace SOLID.InterfaceSegregationPrinciple.Solution.Services;
+namespace Api.InterfaceSegregationPrinciple.Solution.Services;
 
 public class AccountService : IAccountService
 {

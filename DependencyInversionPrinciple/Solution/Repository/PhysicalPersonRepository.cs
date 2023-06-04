@@ -1,8 +1,8 @@
-﻿using SOLID.DependencyInversionPrinciple.Solution.Entities;
-using SOLID.DependencyInversionPrinciple.Solution.Repository.Interfaces;
-using SOLID.DependencyInversionPrinciple.Solution.ValueObjects;
+﻿using Api.DependencyInversionPrinciple.Solution.Entities;
+using Api.DependencyInversionPrinciple.Solution.Repository.Interfaces;
+using Api.DependencyInversionPrinciple.Solution.ValueObjects;
 
-namespace SOLID.DependencyInversionPrinciple.Solution.Repository;
+namespace Api.DependencyInversionPrinciple.Solution.Repository;
 
 public class PhysicalPersonRepository : IPhysicalPersonRepository
 {

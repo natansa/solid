@@ -1,8 +1,8 @@
-﻿using SOLID.DependencyInversionPrinciple.Violation.Entities;
-using SOLID.DependencyInversionPrinciple.Violation.Repository;
-using SOLID.DependencyInversionPrinciple.Violation.Services.Interfaces;
+﻿using Api.DependencyInversionPrinciple.Violation.Entities;
+using Api.DependencyInversionPrinciple.Violation.Repository;
+using Api.DependencyInversionPrinciple.Violation.Services.Interfaces;
 
-namespace SOLID.DependencyInversionPrinciple.Violation.Services;
+namespace Api.DependencyInversionPrinciple.Violation.Services;
 
 public class AccountService : IAccountService
 {

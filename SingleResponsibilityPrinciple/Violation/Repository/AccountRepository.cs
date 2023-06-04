@@ -1,6 +1,6 @@
-﻿using SOLID.SingleResponsibilityPrinciple.Violation.Entities;
+﻿using Api.SingleResponsibilityPrinciple.Violation.Entities;
 
-namespace SOLID.SingleResponsibilityPrinciple.Violation.Repository;
+namespace Api.SingleResponsibilityPrinciple.Violation.Repository;
 
 public class AccountRepository
 {

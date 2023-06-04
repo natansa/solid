@@ -1,7 +1,7 @@
 ﻿using Api.InterfaceSegregationPrinciple.Solution.Repository.Interfaces;
-using SOLID.InterfaceSegregationPrinciple.Solution.Entities;
+using Api.InterfaceSegregationPrinciple.Solution.Entities;
 
-namespace SOLID.InterfaceSegregationPrinciple.Solution.Repository;
+namespace Api.InterfaceSegregationPrinciple.Solution.Repository;
 
 public class AccountRepository : IAccountRepository
 {

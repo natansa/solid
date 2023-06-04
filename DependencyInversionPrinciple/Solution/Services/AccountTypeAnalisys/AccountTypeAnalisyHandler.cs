@@ -1,4 +1,4 @@
-﻿namespace SOLID.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿namespace Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
 
 public abstract class AccountTypeAnalisyHandler
 {

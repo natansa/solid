@@ -1,7 +1,7 @@
-﻿using SOLID.DependencyInversionPrinciple.Solution.Enums;
+﻿using Api.DependencyInversionPrinciple.Solution.Enums;
 using System.Text;
 
-namespace SOLID.DependencyInversionPrinciple.Solution.Entities;
+namespace Api.DependencyInversionPrinciple.Solution.Entities;
 
 public class AccountEntity
 {

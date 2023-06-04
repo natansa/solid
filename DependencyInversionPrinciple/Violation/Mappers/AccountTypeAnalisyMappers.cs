@@ -1,8 +1,8 @@
-﻿using SOLID.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
-using SOLID.DependencyInversionPrinciple.Violation.Entities;
-using SOLID.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys;
+﻿using Api.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
+using Api.DependencyInversionPrinciple.Violation.Entities;
+using Api.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys;
 
-namespace SOLID.DependencyInversionPrinciple.Violation.Mappers;
+namespace Api.DependencyInversionPrinciple.Violation.Mappers;
 
 public static class AccountTypeAnalisyMappers
 {
