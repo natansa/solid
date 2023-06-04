@@ -3,15 +3,14 @@ using SOLID.InterfaceSegregationPrinciple.Violation.Entities;
 
 namespace SOLID.InterfaceSegregationPrinciple.Violation.Mappers;
 
-public static class PhysicalPersonMappers
+public static class LegalPersonMappers
 {
-    public static PhysicalPersonEntity MapToPhysicalPersonEntity(this CreateAccountIspViolationInput input) 
+    public static LegalPersonEntity MapToLegalPersonEntity(this CreateAccountIspViolationInput input) 
     {
-        return new PhysicalPersonEntity
+        return new LegalPersonEntity
         (
             name: input.Name,
-            birthday: input.Birthday,
-            cpf: input.MapToCpf(),
+            cnpj: input.MapToCnpj(),
             phone: input.Phone,
             token: input.Token
         );

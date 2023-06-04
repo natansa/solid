@@ -6,7 +6,7 @@ namespace SOLID.InterfaceSegregationPrinciple.Violation.Mappers;
 
 public static class AccountTypeAnalisyMappers
 {
-    public static AccountTypeAnalisy MapToAnalisy(this AccountEntity accountEntity, CreateAccountInput input) 
+    public static AccountTypeAnalisy MapToAnalisy(this AccountEntity accountEntity, CreateAccountIspViolationInput input) 
     {
         return new AccountTypeAnalisy(input, accountEntity);
     }

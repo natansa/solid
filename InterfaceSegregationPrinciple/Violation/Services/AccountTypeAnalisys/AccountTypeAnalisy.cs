@@ -5,12 +5,12 @@ namespace SOLID.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnal
 
 public class AccountTypeAnalisy
 {
-    public AccountTypeAnalisy(CreateAccountInput input, AccountEntity accountEntity)
+    public AccountTypeAnalisy(CreateAccountIspViolationInput input, AccountEntity accountEntity)
     {
         Input = input;
         AccountEntity = accountEntity;
     }
 
-    public CreateAccountInput Input { get; }
+    public CreateAccountIspViolationInput Input { get; }
     public AccountEntity AccountEntity { get; }
 }
