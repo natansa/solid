@@ -6,20 +6,13 @@ namespace Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisy
 
 public class AccountTypeAnalisysService : IAccountTypeAnalisysService
 {
-    private readonly SmsService _smsService;
-    private readonly ComplianceService _complianceService;
-    private readonly B3Service _b3Service;
     private readonly IndividualAccountChainsHandler _individualAccountHandler;
     private readonly CorporateAccountChainsHandler _corporateAccountHandler;
     private readonly InvestmentAccountChainsHandler _investmentAccountHandler;
     private readonly ICollection<AccountTypeAnalisyStrategyHandler> _accountTypeAnalisyStrategyHandler;
 
-    public AccountTypeAnalisysService(SmsService smsService, ComplianceService complianceService, B3Service b3Service)
+    public AccountTypeAnalisysService()
     {
-        _smsService = smsService;
-        _complianceService = complianceService;
-        _b3Service = b3Service;
-
         _individualAccountHandler = new IndividualAccountChainsHandler();
         _corporateAccountHandler = new CorporateAccountChainsHandler();
         _investmentAccountHandler = new InvestmentAccountChainsHandler();

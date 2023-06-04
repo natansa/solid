@@ -5,24 +5,20 @@ using Api.InterfaceSegregationPrinciple.Solution.Mappers;
 using Api.InterfaceSegregationPrinciple.Solution.Repository;
 using Api.InterfaceSegregationPrinciple.Solution.Services;
 using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
+using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
+using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.Interfaces;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.UseCases;
 
 public class CreateAccountUseCase : ICreateAccountUseCase
 {
-    private readonly AccountService _accountService;
-    private readonly AccountTypeAnalisysService _accountTypeAnalisysService;
-    private readonly PersonService _personService;
+    private readonly IAccountService _accountService;
+    private readonly IAccountTypeAnalisysService _accountTypeAnalisysService;
+    private readonly IPersonService _personService;
 
     public CreateAccountUseCase()
     {
-        _accountTypeAnalisysService = new AccountTypeAnalisysService
-        (
-            new SmsService(), 
-            new ComplianceService(), 
-            new B3Service()
-        );
-
+        _accountTypeAnalisysService = new AccountTypeAnalisysService();
         _personService = new PersonService();
         _accountService = new AccountService(new AccountRepository());
     }

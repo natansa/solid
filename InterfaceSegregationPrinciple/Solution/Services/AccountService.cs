@@ -1,15 +1,15 @@
 ﻿using Api.InterfaceSegregationPrinciple.Solution.Models;
 using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 using Api.InterfaceSegregationPrinciple.Solution.Entities;
-using Api.InterfaceSegregationPrinciple.Solution.Repository;
+using Api.InterfaceSegregationPrinciple.Solution.Repository.Interfaces;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Services;
 
 public class AccountService : IAccountService
 {
-    private readonly AccountRepository _accountRepository;
+    private readonly IAccountRepository _accountRepository;
 
-    public AccountService(AccountRepository accountRepository)
+    public AccountService(IAccountRepository accountRepository)
     {
         _accountRepository = accountRepository;
     }

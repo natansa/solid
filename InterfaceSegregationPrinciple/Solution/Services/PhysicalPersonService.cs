@@ -1,14 +1,14 @@
 ﻿using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 using Api.InterfaceSegregationPrinciple.Solution.Entities;
-using Api.InterfaceSegregationPrinciple.Solution.Repository;
+using Api.InterfaceSegregationPrinciple.Solution.Repository.Interfaces;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Services;
 
 public class PhysicalPersonService : IPhysicalPersonService
 {
-    private readonly PhysicalPersonRepository _repository;
+    private readonly IPhysicalPersonRepository _repository;
 
-    public PhysicalPersonService(PhysicalPersonRepository repository)
+    public PhysicalPersonService(IPhysicalPersonRepository repository)
     {
         _repository = repository;
     }

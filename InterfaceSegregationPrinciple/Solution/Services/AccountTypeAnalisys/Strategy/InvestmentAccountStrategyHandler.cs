@@ -1,11 +1,10 @@
-﻿using Api.InterfaceSegregationPrinciple.Solution.Services;
-using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
 
 public class InvestmentAccountStrategyHandler : AccountTypeAnalisyStrategyHandler
 {
-    private readonly B3Service _b3Service;
+    private readonly IB3Service _b3Service;
 
     public InvestmentAccountStrategyHandler()
     {

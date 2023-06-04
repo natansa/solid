@@ -1,14 +1,14 @@
 ﻿using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 using Api.InterfaceSegregationPrinciple.Solution.Entities;
-using Api.InterfaceSegregationPrinciple.Solution.Repository;
+using Api.InterfaceSegregationPrinciple.Solution.Repository.Interfaces;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Services;
 
 public class LegalPersonService : ILegalPersonService
 {
-    private readonly LegalPersonRepository _repository;
+    private readonly ILegalPersonRepository _repository;
 
-    public LegalPersonService(LegalPersonRepository repository)
+    public LegalPersonService(ILegalPersonRepository repository)
     {
         _repository = repository;
     }

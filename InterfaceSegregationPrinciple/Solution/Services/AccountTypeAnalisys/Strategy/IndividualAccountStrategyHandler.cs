@@ -1,11 +1,10 @@
-﻿using Api.InterfaceSegregationPrinciple.Solution.Services;
-using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
 
 public class IndividualAccountStrategyHandler : AccountTypeAnalisyStrategyHandler
 {
-    private readonly SmsService _smsService;
+    private readonly ISmsService _smsService;
 
     public IndividualAccountStrategyHandler()
     {

@@ -1,11 +1,10 @@
-﻿using Api.InterfaceSegregationPrinciple.Solution.Services;
-using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
 
 public class CorporateAccountStrategyHandler : AccountTypeAnalisyStrategyHandler
 {
-    private readonly ComplianceService _complianceService;
+    private readonly IComplianceService _complianceService;
 
     public CorporateAccountStrategyHandler()
     {
