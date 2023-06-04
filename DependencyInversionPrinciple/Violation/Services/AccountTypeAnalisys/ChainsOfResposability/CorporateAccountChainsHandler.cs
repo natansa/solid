@@ -1,12 +1,12 @@
-﻿namespace Api.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys;
+﻿namespace Api.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys.ChainsOfResposability;
 
-public class CorporateAccountHandler : AccountTypeAnalisyHandler
+public class CorporateAccountChainsHandler : AccountTypeAnalisyChainsHandler
 {
     private readonly ComplianceService _complianceService;
 
-    public CorporateAccountHandler(ComplianceService complianceService)
+    public CorporateAccountChainsHandler()
     {
-        _complianceService = complianceService;
+        _complianceService = new ComplianceService();
     }
 
     public override void HandleRequest(AccountTypeAnalisy accountTypeAnalisy)
@@ -16,7 +16,7 @@ public class CorporateAccountHandler : AccountTypeAnalisyHandler
             _complianceService.Send(accountTypeAnalisy.AccountEntity.AccountNumber);
             return;
         }
-        
+
         _nextHandler?.HandleRequest(accountTypeAnalisy);
     }
 }

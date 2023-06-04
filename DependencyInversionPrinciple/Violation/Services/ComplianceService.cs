@@ -1,6 +1,8 @@
-﻿namespace Api.DependencyInversionPrinciple.Violation.Services;
+﻿using Api.DependencyInversionPrinciple.Violation.Services.Interfaces;
 
-public class ComplianceService
+namespace Api.DependencyInversionPrinciple.Violation.Services;
+
+public class ComplianceService : IComplianceService
 {
     private readonly string _topicKafkaCompliance;
 

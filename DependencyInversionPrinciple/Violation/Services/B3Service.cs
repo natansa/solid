@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Api.DependencyInversionPrinciple.Violation.Services.Interfaces;
 
 namespace Api.DependencyInversionPrinciple.Violation.Services;
 
-public class B3Service
+public class B3Service : IB3Service
 {
     private readonly string _endpointHttpB3;
 

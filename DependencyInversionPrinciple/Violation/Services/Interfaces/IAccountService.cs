@@ -1,8 +1,10 @@
-﻿using Api.DependencyInversionPrinciple.Violation.Entities;
+﻿using Api.DependencyInversionPrinciple.Violation.Models;
+using Api.DependencyInversionPrinciple.Violation.Entities;
 
 namespace Api.DependencyInversionPrinciple.Violation.Services.Interfaces;
 
 public interface IAccountService
 {
-    (bool Success, AccountEntity AccountEntity) Create(AccountEntity account);
+    CreateAccountResult Create(AccountEntity account);
+    AccountEntity GetAccountBalance(AccountEntity accountEntity);
 }

@@ -1,12 +1,12 @@
-﻿namespace Api.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys;
+﻿namespace Api.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys.ChainsOfResposability;
 
-public class IndividualAccountHandler : AccountTypeAnalisyHandler
+public class IndividualAccountChainsHandler : AccountTypeAnalisyChainsHandler
 {
     private readonly SmsService _smsService;
 
-    public IndividualAccountHandler(SmsService smsService)
+    public IndividualAccountChainsHandler()
     {
-        _smsService = smsService;
+        _smsService = new SmsService();
     }
 
     public override void HandleRequest(AccountTypeAnalisy accountTypeAnalisy)
@@ -16,7 +16,7 @@ public class IndividualAccountHandler : AccountTypeAnalisyHandler
             _smsService.Send(accountTypeAnalisy.Input.Phone);
             return;
         }
-        
+
         _nextHandler?.HandleRequest(accountTypeAnalisy);
     }
 }

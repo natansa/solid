@@ -4,8 +4,8 @@ namespace Api.DependencyInversionPrinciple.Violation.Entities;
 
 public class PhysicalPersonEntity : PersonEntity
 {
-    public PhysicalPersonEntity(string name, DateTime birthday, CpfValueObject cpf, string phone) 
-        : base (name, phone)
+    public PhysicalPersonEntity(string name, DateTime birthday, CpfValueObject cpf, string phone, int token)
+        : base(name, phone, token)
     {
         Birthday = birthday;
         Cpf = cpf;
@@ -23,8 +23,14 @@ public class PhysicalPersonEntity : PersonEntity
         return false;
     }
 
+    public override bool TokenIsValid()
+    {
+        if (Token > 0) return true;
+        return false;
+    }
+
     private bool IsMinorAge()
     {
-        return DateTime.Now.Year - Birthday.Year > 18;
+        return DateTime.Now.Year - Birthday.Year < 18;
     }
 }

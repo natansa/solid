@@ -1,12 +1,12 @@
-﻿namespace Api.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys;
+﻿namespace Api.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys.ChainsOfResposability;
 
-public class InvestmentAccountHandler : AccountTypeAnalisyHandler
+public class InvestmentAccountChainsHandler : AccountTypeAnalisyChainsHandler
 {
     private readonly B3Service _b3Service;
 
-    public InvestmentAccountHandler(B3Service b3Service)
+    public InvestmentAccountChainsHandler()
     {
-        _b3Service = b3Service;
+        _b3Service = new B3Service();
     }
 
     public override void HandleRequest(AccountTypeAnalisy accountTypeAnalisy)
@@ -16,7 +16,7 @@ public class InvestmentAccountHandler : AccountTypeAnalisyHandler
             _b3Service.Send(accountTypeAnalisy.AccountEntity.AccountNumber);
             return;
         }
-        
+
         _nextHandler?.HandleRequest(accountTypeAnalisy);
     }
 }

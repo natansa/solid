@@ -1,6 +1,8 @@
-﻿namespace Api.DependencyInversionPrinciple.Violation.Services;
+﻿using Api.DependencyInversionPrinciple.Violation.Services.Interfaces;
 
-public class SmsService
+namespace Api.DependencyInversionPrinciple.Violation.Services;
+
+public class SmsService : ISmsService
 {
     private readonly string _accessKeyZenvia;
     private readonly string _secretKeyZenvia;

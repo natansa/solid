@@ -3,15 +3,14 @@ using Api.DependencyInversionPrinciple.Violation.Entities;
 
 namespace Api.DependencyInversionPrinciple.Violation.Mappers;
 
-public static class PhysicalPersonMappers
+public static class LegalPersonMappers
 {
-    public static PhysicalPersonEntity MapToPhysicalPersonEntity(this CreateAccountIspSolutionInput input) 
+    public static LegalPersonEntity MapToLegalPersonEntity(this CreateAccountIspSolutionInput input) 
     {
-        return new PhysicalPersonEntity
+        return new LegalPersonEntity
         (
             name: input.Name,
-            birthday: input.Birthday,
-            cpf: input.MapToCpf(),
+            cnpj: input.MapToCnpj(),
             phone: input.Phone,
             token: input.Token
         );

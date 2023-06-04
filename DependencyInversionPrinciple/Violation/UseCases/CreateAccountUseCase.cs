@@ -1,66 +1,61 @@
-﻿using Api.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
+﻿using Api.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys.Strategy;
+using Api.DependencyInversionPrinciple.Violation.UseCases.Interfaces;
+using Api.DependencyInversionPrinciple.Violation.Boundaries.CreateAccount;
 using Api.DependencyInversionPrinciple.Violation.Mappers;
 using Api.DependencyInversionPrinciple.Violation.Repository;
 using Api.DependencyInversionPrinciple.Violation.Services;
 using Api.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys;
 using Api.DependencyInversionPrinciple.Violation.Services.Interfaces;
+using Api.DependencyInversionPrinciple.Violation.Services.AccountTypeAnalisys.Interfaces;
 
 namespace Api.DependencyInversionPrinciple.Violation.UseCases;
 
-public class CreateAccountUseCase
+public class CreateAccountUseCase : ICreateAccountUseCase
 {
-    private readonly IPersonService _personService;
-    private readonly IPersonQueryService _personQueryService;
-    private readonly IPersonCommandService _personCommandService;
     private readonly IAccountService _accountService;
     private readonly IAccountTypeAnalisysService _accountTypeAnalisysService;
+    private readonly IPersonService _personService;
 
     public CreateAccountUseCase()
     {
-        _accountTypeAnalisysService = new AccountTypeAnalisysService
-        (
-            new SmsService(), 
-            new ComplianceService(), 
-            new B3Service()
-        );
-
-        _personService = new PersonService(new PersonRepository(), new PhysicalPersonRepository(), new LegalPersonRepository());
-        _personQueryService = new PersonService(new PersonRepository(), new PhysicalPersonRepository(), new LegalPersonRepository());
-        _personCommandService = new PersonService(new PersonRepository(), new PhysicalPersonRepository(), new LegalPersonRepository());
-        _accountService = new AccountService(new AccountRepository());
+        _accountTypeAnalisysService = new AccountTypeAnalisysService();
+        _personService = new PersonService();
+        _accountService = new AccountService(new AccountRepository(), new AccountRepository());
     }
 
-    public CreateAccountOutput Create(CreateAccountInput input)
+    public CreateAccountIspSolutionOutput Create(CreateAccountIspSolutionInput input)
     {
-        var successCreatedPerson = CreatePerson(input);
+        var successCreatedPhysicalPerson = _personService.Create(input);
         var successCreatedAccount = _accountService.Create(input.MapToAccountEntity());
 
-        if (successCreatedPerson && successCreatedAccount.Success)
+        if (successCreatedPhysicalPerson && successCreatedAccount.Success)
         {
-            _accountTypeAnalisysService.Dispatcher(successCreatedAccount.AccountEntity.MapToAnalisy(input));
+            // OPEN CLOSED WITH CHAIS OF RESPNSABILITY
+            _accountTypeAnalisysService.DispatcherChainsOfResponsability(successCreatedAccount.AccountEntity.MapToAnalisy(input));
+
+            // OPEN CLOSED WITH STRATEGY - MODEL ONE
+            _accountTypeAnalisysService.DispatcherStrategy(successCreatedAccount.AccountEntity.MapToAnalisy(input));
+
+            // OPEN CLOSED WITH STRATEGY - MODEL TWO
+            switch (successCreatedAccount.AccountEntity.AccountType)
+            {
+                case Enums.AccountType.IndividualAccount:
+                    _accountTypeAnalisysService.DispatcherStrategy(new IndividualAccountStrategyHandler(successCreatedAccount.AccountEntity.MapToAnalisy(input)));
+                    break;
+                case Enums.AccountType.CorporateAccount:
+                    _accountTypeAnalisysService.DispatcherStrategy(new CorporateAccountStrategyHandler(successCreatedAccount.AccountEntity.MapToAnalisy(input)));
+                    break;
+                case Enums.AccountType.InvestmentAccount:
+                    _accountTypeAnalisysService.DispatcherStrategy(new InvestmentAccountStrategyHandler(successCreatedAccount.AccountEntity.MapToAnalisy(input)));
+                    break;
+                default:
+                    throw new InvalidOperationException($"Erro in {nameof(successCreatedAccount.AccountEntity.AccountType)}");
+                    break;
+            }
+
             return successCreatedAccount.AccountEntity.MapToOutput();
         }
         
         return default;
-    }
-
-    //private bool CreatePerson(CreateAccountInput input) 
-    //{
-    //    if (_personService.IsLegalPerson(input))
-    //    {
-    //        return _personService.Create(input.MapToLegalPersonEntity());
-    //    }
-            
-    //    return _personService.Create(input.MapToPhysicalPersonEntity());
-    //}
-
-    private bool CreatePerson(CreateAccountInput input)
-    {
-        if (_personQueryService.IsLegalPerson(input))
-        {
-            return _personCommandService.Create(input.MapToLegalPersonEntity());
-        }
-
-        return _personCommandService.Create(input.MapToPhysicalPersonEntity());
     }
 }

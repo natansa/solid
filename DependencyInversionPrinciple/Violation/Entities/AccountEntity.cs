@@ -5,6 +5,11 @@ namespace Api.DependencyInversionPrinciple.Violation.Entities;
 
 public class AccountEntity
 {
+    public AccountEntity(string accountNumber)
+    {
+        AccountNumber = accountNumber;
+    }
+
     public AccountEntity(string password, AccountType accountType)
     {
         CreateAccount();
@@ -15,6 +20,7 @@ public class AccountEntity
     public string AccountNumber { get; private set; }
     public string Password { get; private set; }
     public AccountType AccountType { get; private set; }
+    public decimal AccountBalance { get; private set; }
 
     public bool IsInvalid() 
     {
@@ -36,6 +42,11 @@ public class AccountEntity
     public bool IsInvestmentAccount()
     {
         return AccountType.Equals(AccountType.InvestmentAccount);
+    }
+
+    public void AddAccountBalance(decimal accountBalance)
+    {
+        AccountBalance = accountBalance;
     }
 
     private void CreateAccount()
