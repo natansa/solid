@@ -1,9 +1,10 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Solution.Entities;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
+using SOLID.InterfaceSegregationPrinciple.Solution.Entities;
 using SOLID.InterfaceSegregationPrinciple.Solution.Repository;
 
 namespace SOLID.InterfaceSegregationPrinciple.Solution.Services;
 
-public class LegalPersonService
+public class LegalPersonService : ILegalPersonService
 {
     private readonly LegalPersonRepository _repository;
 

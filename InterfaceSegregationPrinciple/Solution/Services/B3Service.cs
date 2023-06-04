@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 
 namespace SOLID.InterfaceSegregationPrinciple.Solution.Services;
 
-public class B3Service
+public class B3Service : IB3Service
 {
     private readonly string _endpointHttpB3;
 

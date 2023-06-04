@@ -1,11 +1,12 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
+using SOLID.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
 using SOLID.InterfaceSegregationPrinciple.Solution.Enums;
 using SOLID.InterfaceSegregationPrinciple.Solution.Mappers;
 using SOLID.InterfaceSegregationPrinciple.Solution.Repository;
 
 namespace SOLID.InterfaceSegregationPrinciple.Solution.Services;
 
-public class PersonService
+public class PersonService : IPersonService
 {
     private readonly PhysicalPersonService _physicalPersonService;
     private readonly LegalPersonService _legalPersonService;

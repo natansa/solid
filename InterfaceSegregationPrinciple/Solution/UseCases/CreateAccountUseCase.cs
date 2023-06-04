@@ -1,4 +1,5 @@
 ﻿using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
+using Api.InterfaceSegregationPrinciple.Solution.UseCases.Interfaces;
 using SOLID.InterfaceSegregationPrinciple.Solution.Boundaries.CreateAccount;
 using SOLID.InterfaceSegregationPrinciple.Solution.Mappers;
 using SOLID.InterfaceSegregationPrinciple.Solution.Repository;
@@ -7,7 +8,7 @@ using SOLID.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
 
 namespace SOLID.InterfaceSegregationPrinciple.Solution.UseCases;
 
-public class CreateAccountUseCase
+public class CreateAccountUseCase : ICreateAccountUseCase
 {
     private readonly AccountService _accountService;
     private readonly AccountTypeAnalisysService _accountTypeAnalisysService;

@@ -1,6 +1,8 @@
-﻿namespace SOLID.InterfaceSegregationPrinciple.Solution.Services;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 
-public class ComplianceService
+namespace SOLID.InterfaceSegregationPrinciple.Solution.Services;
+
+public class ComplianceService : IComplianceService
 {
     private readonly string _topicKafkaCompliance;
 

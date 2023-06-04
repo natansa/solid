@@ -1,9 +1,10 @@
 ﻿using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
+using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.Interfaces;
 using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
 
 namespace SOLID.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
 
-public class AccountTypeAnalisysService
+public class AccountTypeAnalisysService : IAccountTypeAnalisysService
 {
     private readonly SmsService _smsService;
     private readonly ComplianceService _complianceService;

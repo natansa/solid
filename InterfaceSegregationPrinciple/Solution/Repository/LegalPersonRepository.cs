@@ -1,8 +1,9 @@
-﻿using SOLID.InterfaceSegregationPrinciple.Solution.Entities;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Repository.Interfaces;
+using SOLID.InterfaceSegregationPrinciple.Solution.Entities;
 
 namespace SOLID.InterfaceSegregationPrinciple.Solution.Repository;
 
-public class LegalPersonRepository
+public class LegalPersonRepository : ILegalPersonRepository
 {
     public bool LegalPersonAlreadyExists(LegalPersonEntity legalPersonEntity)
     {

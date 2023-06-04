@@ -1,6 +1,8 @@
-﻿namespace SOLID.InterfaceSegregationPrinciple.Solution.Services;
+﻿using Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 
-public class SmsService
+namespace SOLID.InterfaceSegregationPrinciple.Solution.Services;
+
+public class SmsService : ISmsService
 {
     private readonly string _accessKeyZenvia;
     private readonly string _secretKeyZenvia;
