@@ -1,7 +1,6 @@
-﻿namespace Api.DependencyInversionPrinciple.Solution.Services.Interfaces
+﻿namespace Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
+
+public interface ISmsService
 {
-    public interface ISmsService
-    {
-        void Send(string phone);
-    }
+    void Send(string phone);
 }

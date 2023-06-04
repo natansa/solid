@@ -1,27 +1,26 @@
-﻿namespace Api.DependencyInversionPrinciple.Solution.ValueObjects
+﻿namespace Api.DependencyInversionPrinciple.Solution.ValueObjects;
+
+public class CnpjValueObject
 {
-    public class CnpjValueObject
+    public CnpjValueObject(string cnpj)
     {
-        public CnpjValueObject(string cnpj)
-        {
-            Cnpj = cnpj;
-        }
+        Cnpj = cnpj;
+    }
 
-        public string Cnpj { get; private set; }
+    public string Cnpj { get; private set; }
 
-        public bool IsInvalid()
-        {
-            return true;
-        }
+    public bool IsInvalid()
+    {
+        return false;
+    }
 
-        public string GetFormatted() 
-        {
-            return string.Format(Cnpj, "00.000.000/0000-00");
-        }
+    public string GetFormatted() 
+    {
+        return string.Format(Cnpj, "00.000.000/0000-00");
+    }
 
-        public string GetWithoutFormatting()
-        {
-            return Cnpj.Replace(".", string.Empty).Replace("-", string.Empty).Replace("/", string.Empty).Replace(" ", string.Empty);
-        }
+    public string GetWithoutFormatting()
+    {
+        return Cnpj.Replace(".", string.Empty).Replace("-", string.Empty).Replace("/", string.Empty).Replace(" ", string.Empty);
     }
 }

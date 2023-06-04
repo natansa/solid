@@ -4,8 +4,8 @@ namespace Api.DependencyInversionPrinciple.Solution.Entities;
 
 public class LegalPersonEntity : PersonEntity
 {
-    public LegalPersonEntity(string name, CnpjValueObject cnpj, string phone)
-        : base(name, phone)
+    public LegalPersonEntity(string name, CnpjValueObject cnpj, string phone, int token) 
+        : base(name, phone, token)
     {
         Cnpj = cnpj;
     }
@@ -17,5 +17,10 @@ public class LegalPersonEntity : PersonEntity
         if (Cnpj.IsInvalid()) return true;
 
         return false;
+    }
+
+    public override bool TokenIsValid()
+    {
+        throw new InvalidOperationException("Pessoa Jurídica não tem token");
     }
 }

@@ -2,8 +2,8 @@
 
 namespace Api.DependencyInversionPrinciple.Solution.Repository.Interfaces
 {
-    public interface IPersonRepository
+    public interface IAccountCommandRepository
     {
-        bool PersonAlreadyExists(PersonEntity personEntity);
+        int CreateNewAccount(AccountEntity account);
     }
 }

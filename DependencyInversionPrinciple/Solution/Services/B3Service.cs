@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
+﻿using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
 
 namespace Api.DependencyInversionPrinciple.Solution.Services;
 

@@ -1,7 +1,6 @@
-﻿namespace Api.DependencyInversionPrinciple.Solution.Services.Interfaces
+﻿namespace Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
+
+public interface IComplianceService
 {
-    public interface IComplianceService
-    {
-        void Send(string accountNumber);
-    }
+    void Send(string accountNumber);
 }

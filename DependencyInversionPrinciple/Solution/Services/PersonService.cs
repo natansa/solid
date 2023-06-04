@@ -1,75 +1,39 @@
-﻿using Api.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
-using Api.DependencyInversionPrinciple.Solution.Entities;
+﻿using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
+using Api.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
 using Api.DependencyInversionPrinciple.Solution.Enums;
-using Api.DependencyInversionPrinciple.Solution.Repository.Interfaces;
-using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
-using Api.DependencyInversionPrinciple.Solution.ValueObjects;
+using Api.DependencyInversionPrinciple.Solution.Mappers;
+using Api.DependencyInversionPrinciple.Solution.Repository;
 
 namespace Api.DependencyInversionPrinciple.Solution.Services;
 
-public class PersonService : IPersonService, IPersonQueryService, IPersonCommandService
+public class PersonService : IPersonService
 {
-    private readonly IPersonRepository _personRepository;
-    private readonly IPhysicalPersonRepository _physicalPersonRepository;
-    private readonly ILegalPersonRepository _legalPersonRepository;
+    private readonly PhysicalPersonService _physicalPersonService;
+    private readonly LegalPersonService _legalPersonService;
 
-    public PersonService(IPersonRepository personRepository, 
-                         IPhysicalPersonRepository physicalPersonRepository, 
-                         ILegalPersonRepository legalPersonRepository)
+    public PersonService()
     {
-        _personRepository = personRepository;
-        _physicalPersonRepository = physicalPersonRepository;
-        _legalPersonRepository = legalPersonRepository;
+        _physicalPersonService = new PhysicalPersonService(new PhysicalPersonRepository(), new PhysicalPersonRepository());
+        _legalPersonService = new LegalPersonService(new LegalPersonRepository(), new LegalPersonRepository());
     }
 
-    public bool IsLegalPerson(CreateAccountInput input) 
+    public bool Create(CreateAccountIspSolutionInput input) 
     {
-        if (input.AccountType == (int)AccountType.CorporateAccount)
+        Dictionary<AccountType, Func<bool>> personsService = new Dictionary<AccountType, Func<bool>>
         {
-            return true;
+            { AccountType.IndividualAccount, () => _physicalPersonService.Create(input.MapToPhysicalPersonEntity()) },
+            { AccountType.InvestmentAccount, () => _physicalPersonService.Create(input.MapToPhysicalPersonEntity()) },
+            { AccountType.CorporateAccount, () => _legalPersonService.Create(input.MapToLegalPersonEntity()) }
+        };
+
+        var accountType = (AccountType)Enum.ToObject(typeof(AccountType), input.AccountType);
+
+        if (personsService.TryGetValue(accountType, out Func<bool> person)) 
+        {
+            var success = person.Invoke();
+            return success;
         }
 
-        return false;
-    }
-
-    public bool Create(PhysicalPersonEntity physicalPerson)
-    {
-        Validate(physicalPerson);
-        var rowAffecteds = _physicalPersonRepository.CreateNewPhysicalPerson(physicalPerson);
-        var success = rowAffecteds > 0;
-        return success;
-    }
-
-    public bool Create(LegalPersonEntity legalPerson)
-    {
-        Validate(legalPerson);
-        var rowAffecteds = _legalPersonRepository.CreateNewLegalPerson(legalPerson);
-        var success = rowAffecteds > 0;
-        return success;
-    }
-
-    public PhysicalPersonEntity Get(CpfValueObject cpf)
-    {
-        return _physicalPersonRepository.Get(cpf);
-    }
-
-    public LegalPersonEntity Get(CnpjValueObject cnpj)
-    {
-        return _legalPersonRepository.Get(cnpj);
-    }
-
-    private void Validate(PersonEntity personEntity)
-    {
-        if (personEntity == null) throw new ArgumentNullException(nameof(PersonEntity));
-
-        if (personEntity.IsInvalid()) throw new InvalidOperationException(nameof(personEntity));
-
-        if (PersonAlreadyExists(personEntity)) throw new InvalidOperationException($"Pessoa {personEntity.Name} ja existe");
-    }
-
-    private bool PersonAlreadyExists(PersonEntity personEntity)
-    {
-        var physicalPersonAlreadyExists = _personRepository.PersonAlreadyExists(personEntity);
-        return physicalPersonAlreadyExists;
+        throw new InvalidOperationException("Tipo de conta inválida");
     }
 }

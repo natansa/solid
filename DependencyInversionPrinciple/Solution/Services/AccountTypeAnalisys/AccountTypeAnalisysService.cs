@@ -1,19 +1,46 @@
-﻿using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
-using Api.DependencyInversionPrinciple.Solution.Services.Interfaces.AccountTypeAnalisys;
+﻿using Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
+using Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys.Interfaces;
+using Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys.Strategy;
 
 namespace Api.DependencyInversionPrinciple.Solution.Services.AccountTypeAnalisys;
 
 public class AccountTypeAnalisysService : IAccountTypeAnalisysService
 {
-    private readonly IIndividualAccountHandler _individualAccountHandler;
+    private readonly IndividualAccountChainsHandler _individualAccountHandler;
+    private readonly CorporateAccountChainsHandler _corporateAccountHandler;
+    private readonly InvestmentAccountChainsHandler _investmentAccountHandler;
+    private readonly ICollection<AccountTypeAnalisyStrategyHandler> _accountTypeAnalisyStrategyHandler;
 
-    public AccountTypeAnalisysService(IIndividualAccountHandler individualAccountHandler)
+    public AccountTypeAnalisysService()
     {
-        _individualAccountHandler = individualAccountHandler;
+        _individualAccountHandler = new IndividualAccountChainsHandler();
+        _corporateAccountHandler = new CorporateAccountChainsHandler();
+        _investmentAccountHandler = new InvestmentAccountChainsHandler();
+
+        _individualAccountHandler.SetNextHandler(_corporateAccountHandler);
+        _corporateAccountHandler.SetNextHandler(_investmentAccountHandler);
+
+        _accountTypeAnalisyStrategyHandler = new List<AccountTypeAnalisyStrategyHandler>();
+        _accountTypeAnalisyStrategyHandler.Add(new CorporateAccountStrategyHandler());
+        _accountTypeAnalisyStrategyHandler.Add(new IndividualAccountStrategyHandler());
+        _accountTypeAnalisyStrategyHandler.Add(new InvestmentAccountStrategyHandler());
     }
 
-    public void Dispatcher(AccountTypeAnalisy accountTypeAnalisy) 
+    public void DispatcherChainsOfResponsability(AccountTypeAnalisy accountTypeAnalisy) 
     {
         _individualAccountHandler.HandleRequest(accountTypeAnalisy);
+    }
+
+    public void DispatcherStrategy(AccountTypeAnalisy accountTypeAnalisy)
+    {
+        foreach (var strategy in _accountTypeAnalisyStrategyHandler)
+        {
+            strategy.HandleRequest(accountTypeAnalisy);
+        }
+    }
+
+    public void DispatcherStrategy(AccountTypeAnalisyStrategyHandler strategy)
+    {
+        strategy.HandleRequest();
     }
 }

@@ -1,7 +1,6 @@
-﻿namespace Api.DependencyInversionPrinciple.Solution.Services.Interfaces
+﻿namespace Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
+
+public interface IB3Service
 {
-    public interface IB3Service
-    {
-        void Send(string accountNumber);
-    }
+    void Send(string accountNumber);
 }

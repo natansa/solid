@@ -1,24 +1,35 @@
-﻿using Api.DependencyInversionPrinciple.Solution.Entities;
-using Api.DependencyInversionPrinciple.Solution.Repository.Interfaces;
+﻿using Api.DependencyInversionPrinciple.Solution.Models;
 using Api.DependencyInversionPrinciple.Solution.Services.Interfaces;
+using Api.DependencyInversionPrinciple.Solution.Entities;
+using Api.DependencyInversionPrinciple.Solution.Repository.Interfaces;
 
 namespace Api.DependencyInversionPrinciple.Solution.Services;
 
 public class AccountService : IAccountService
 {
-    private readonly IAccountRepository _accountRepository;
+    private readonly IAccountCommandRepository _accountCommandRepository;
+    private readonly IAccountQueryRepository _accountQueryRepository;
 
-    public AccountService(IAccountRepository accountRepository)
+    public AccountService(IAccountCommandRepository accountCommandRepository, 
+                          IAccountQueryRepository accountQueryRepository)
     {
-        _accountRepository = accountRepository;
+        _accountCommandRepository = accountCommandRepository;
+        _accountQueryRepository = accountQueryRepository;
     }
 
-    public (bool Success, AccountEntity AccountEntity) Create(AccountEntity account)
+    public CreateAccountResult Create(AccountEntity account)
     {
         ValidateAccount(account);
-        var rowAffecteds = _accountRepository.CreateNewAccount(account);
+        var rowAffecteds = _accountCommandRepository.CreateNewAccount(account);
         var success = rowAffecteds > 0;
-        return new (success, account);
+        return new CreateAccountResult(success, account);
+    }
+
+    public AccountEntity GetAccountBalance(AccountEntity accountEntity)
+    {
+        decimal accountBalance = _accountQueryRepository.GetAccountBalance(accountEntity);
+        accountEntity.AddAccountBalance(accountBalance);
+        return accountEntity;
     }
 
     private void ValidateAccount(AccountEntity account) 
@@ -32,7 +43,7 @@ public class AccountService : IAccountService
 
     private bool AccountAlreadyExists(AccountEntity account) 
     {
-        var accountAlreadyExists = _accountRepository.AccountAlreadyExists(account);
+        var accountAlreadyExists = _accountQueryRepository.AccountAlreadyExists(account);
         return accountAlreadyExists;
     }
 }

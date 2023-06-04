@@ -1,8 +1,8 @@
 ﻿namespace Api.DependencyInversionPrinciple.Solution.Boundaries.CreateAccount;
 
-public class CreateAccountOutput
+public class CreateAccountIspSolutionOutput
 {
-    public CreateAccountOutput(string accountNumber)
+    public CreateAccountIspSolutionOutput(string accountNumber)
     {
         AccountNumber = accountNumber;
     }
