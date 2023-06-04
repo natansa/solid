@@ -3,7 +3,7 @@ using Api.InterfaceSegregationPrinciple.Solution.Entities;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Repository;
 
-public class PhysicalPersonRepository : IPhysicalPersonRepository
+public class PhysicalPersonRepository : IPhysicalPersonQueryRepository, IPhysicalPersonCommandRepository
 {
     public bool PhysicalPersonAlreadyExists(PhysicalPersonEntity physicalPerson)
     {

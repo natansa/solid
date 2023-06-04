@@ -13,8 +13,8 @@ public class PersonService : IPersonService
 
     public PersonService()
     {
-        _physicalPersonService = new PhysicalPersonService(new PhysicalPersonRepository());
-        _legalPersonService = new LegalPersonService(new LegalPersonRepository());
+        _physicalPersonService = new PhysicalPersonService(new PhysicalPersonRepository(), new PhysicalPersonRepository());
+        _legalPersonService = new LegalPersonService(new LegalPersonRepository(), new LegalPersonRepository());
     }
 
     public bool Create(CreateAccountIspSolutionInput input) 

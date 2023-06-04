@@ -1,7 +1,4 @@
-﻿using Api.InterfaceSegregationPrinciple.Solution.Services;
-using Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys;
-
-namespace Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
+﻿namespace Api.InterfaceSegregationPrinciple.Solution.Services.AccountTypeAnalisys.ChainsOfResposability;
 
 public class InvestmentAccountChainsHandler : AccountTypeAnalisyChainsHandler
 {

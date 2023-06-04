@@ -3,7 +3,7 @@ using Api.InterfaceSegregationPrinciple.Solution.Entities;
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Repository;
 
-public class LegalPersonRepository : ILegalPersonRepository
+public class LegalPersonRepository : ILegalPersonQueryRepository, ILegalPersonCommandRepository
 {
     public bool LegalPersonAlreadyExists(LegalPersonEntity legalPersonEntity)
     {

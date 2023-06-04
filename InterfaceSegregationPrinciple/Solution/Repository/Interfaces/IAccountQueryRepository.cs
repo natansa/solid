@@ -2,9 +2,9 @@
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Repository.Interfaces
 {
-    public interface IAccountRepository
+    public interface IAccountQueryRepository
     {
         bool AccountAlreadyExists(AccountEntity account);
-        int CreateNewAccount(AccountEntity account);
+        decimal GetAccountBalance(AccountEntity account);
     }
 }

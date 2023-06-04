@@ -15,4 +15,10 @@ public class AccountRepository
 
         return rowAffects;
     }
+
+    public decimal GetAccountBalance(AccountEntity account)
+    {
+        decimal balance = 1350;
+        return balance;
+    }
 }

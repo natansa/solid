@@ -2,9 +2,8 @@
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Repository.Interfaces
 {
-    public interface ILegalPersonRepository
+    public interface ILegalPersonCommandRepository
     {
-        bool LegalPersonAlreadyExists(LegalPersonEntity legalPersonEntity);
         int CreateNewLegalPerson(LegalPersonEntity legalPersonEntity);
     }
 }

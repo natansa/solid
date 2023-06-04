@@ -6,4 +6,5 @@ namespace Api.InterfaceSegregationPrinciple.Solution.Services.Interfaces;
 public interface IAccountService
 {
     CreateAccountResult Create(AccountEntity account);
+    AccountEntity GetAccountBalance(AccountEntity accountEntity);
 }

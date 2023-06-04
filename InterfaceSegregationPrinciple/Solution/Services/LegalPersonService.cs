@@ -6,17 +6,20 @@ namespace Api.InterfaceSegregationPrinciple.Solution.Services;
 
 public class LegalPersonService : ILegalPersonService
 {
-    private readonly ILegalPersonRepository _repository;
+    private readonly ILegalPersonQueryRepository _queryRepository;
+    private readonly ILegalPersonCommandRepository _commandRepository;
 
-    public LegalPersonService(ILegalPersonRepository repository)
+    public LegalPersonService(ILegalPersonQueryRepository queryRepository, 
+                              ILegalPersonCommandRepository commandRepository)
     {
-        _repository = repository;
+        _queryRepository = queryRepository;
+        _commandRepository = commandRepository;
     }
 
     public bool Create(LegalPersonEntity legalPerson)
     {
         Validate(legalPerson);
-        var rowAffecteds = _repository.CreateNewLegalPerson(legalPerson);
+        var rowAffecteds = _commandRepository.CreateNewLegalPerson(legalPerson);
         var success = rowAffecteds > 0;
         return success;
     }
@@ -32,7 +35,7 @@ public class LegalPersonService : ILegalPersonService
 
     private bool LegalPersonAlreadyExists(LegalPersonEntity legalPerson)
     {
-        var physicalPersonAlreadyExists = _repository.LegalPersonAlreadyExists(legalPerson);
+        var physicalPersonAlreadyExists = _queryRepository.LegalPersonAlreadyExists(legalPerson);
         return physicalPersonAlreadyExists;
     }
 }

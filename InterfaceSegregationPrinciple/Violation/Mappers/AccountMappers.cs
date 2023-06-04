@@ -1,8 +1,9 @@
 ﻿using Api.InterfaceSegregationPrinciple.Violation.Boundaries.CreateAccount;
+using Api.InterfaceSegregationPrinciple.Violation.Boundaries.GetAccountBalance;
 using Api.InterfaceSegregationPrinciple.Violation.Entities;
 using Api.InterfaceSegregationPrinciple.Violation.Enums;
 
-namespace SOLID.InterfaceSegregationPrinciple.Violation.Mappers;
+namespace Api.InterfaceSegregationPrinciple.Violation.Mappers;
 
 public static class AccountMappers
 {
@@ -15,8 +16,24 @@ public static class AccountMappers
         );
     }
 
-    public static CreateAccountIspViolationOutput MapToOuuput(this AccountEntity accountEntity) 
+    public static CreateAccountIspViolationOutput MapToOutput(this AccountEntity accountEntity) 
     {
         return new CreateAccountIspViolationOutput(accountEntity.AccountNumber);
+    }
+
+    public static AccountEntity MapToAccountEntity(this GetAccountBalanceInput input)
+    {
+        return new AccountEntity
+        (
+            accountNumber: input.AccountNumber
+        );
+    }
+
+    public static GetAccountBalanceOutput MapToOutputAccountBalance(this AccountEntity accountEntity)
+    {
+        return new GetAccountBalanceOutput
+        (
+            accountBalance: accountEntity.AccountBalance
+        );
     }
 }

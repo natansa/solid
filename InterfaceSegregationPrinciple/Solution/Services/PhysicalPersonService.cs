@@ -6,17 +6,20 @@ namespace Api.InterfaceSegregationPrinciple.Solution.Services;
 
 public class PhysicalPersonService : IPhysicalPersonService
 {
-    private readonly IPhysicalPersonRepository _repository;
+    private readonly IPhysicalPersonQueryRepository _queryRepository;
+    private readonly IPhysicalPersonCommandRepository _commandRepository;
 
-    public PhysicalPersonService(IPhysicalPersonRepository repository)
+    public PhysicalPersonService(IPhysicalPersonQueryRepository queryRepository, 
+                                 IPhysicalPersonCommandRepository commandRepository)
     {
-        _repository = repository;
+        _queryRepository = queryRepository;
+        _commandRepository = commandRepository;
     }
 
     public bool Create(PhysicalPersonEntity physicalPerson)
     {
         Validate(physicalPerson);
-        var rowAffecteds = _repository.CreateNewPhysicalPerson(physicalPerson);
+        var rowAffecteds = _commandRepository.CreateNewPhysicalPerson(physicalPerson);
         var success = rowAffecteds > 0;
         return success;
     }
@@ -32,7 +35,7 @@ public class PhysicalPersonService : IPhysicalPersonService
 
     private bool PhysicalPersonAlreadyExists(PhysicalPersonEntity physicalPerson)
     {
-        var physicalPersonAlreadyExists = _repository.PhysicalPersonAlreadyExists(physicalPerson);
+        var physicalPersonAlreadyExists = _queryRepository.PhysicalPersonAlreadyExists(physicalPerson);
         return physicalPersonAlreadyExists;
     }
 }

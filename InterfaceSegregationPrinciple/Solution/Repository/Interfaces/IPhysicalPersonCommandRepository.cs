@@ -2,8 +2,7 @@
 
 namespace Api.InterfaceSegregationPrinciple.Solution.Repository.Interfaces;
 
-public interface IPhysicalPersonRepository
+public interface IPhysicalPersonCommandRepository
 {
-    bool PhysicalPersonAlreadyExists(PhysicalPersonEntity physicalPerson);
     int CreateNewPhysicalPerson(PhysicalPersonEntity physicalPerson);
 }

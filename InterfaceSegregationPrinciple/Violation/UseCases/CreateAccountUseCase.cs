@@ -4,7 +4,6 @@ using Api.InterfaceSegregationPrinciple.Violation.Mappers;
 using Api.InterfaceSegregationPrinciple.Violation.Repository;
 using Api.InterfaceSegregationPrinciple.Violation.Services;
 using Api.InterfaceSegregationPrinciple.Violation.Services.AccountTypeAnalisys;
-using SOLID.InterfaceSegregationPrinciple.Violation.Mappers;
 
 namespace Api.InterfaceSegregationPrinciple.Violation.UseCases;
 
@@ -57,7 +56,7 @@ public class CreateAccountUseCase
                     break;
             }
 
-            return successCreatedAccount.AccountEntity.MapToOuuput();
+            return successCreatedAccount.AccountEntity.MapToOutput();
         }
         
         return default;

@@ -20,7 +20,7 @@ public class CreateAccountUseCase : ICreateAccountUseCase
     {
         _accountTypeAnalisysService = new AccountTypeAnalisysService();
         _personService = new PersonService();
-        _accountService = new AccountService(new AccountRepository());
+        _accountService = new AccountService(new AccountRepository(), new AccountRepository());
     }
 
     public CreateAccountIspSolutionOutput Create(CreateAccountIspSolutionInput input)
@@ -53,7 +53,7 @@ public class CreateAccountUseCase : ICreateAccountUseCase
                     break;
             }
 
-            return successCreatedAccount.AccountEntity.MapToOuuput();
+            return successCreatedAccount.AccountEntity.MapToOutput();
         }
         
         return default;
