@@ -15,7 +15,7 @@ public static class AccountMappers
         );
     }
 
-    public static CreateAccountOcpSolutionOutput MapToOuuput(this AccountEntity accountEntity) 
+    public static CreateAccountOcpSolutionOutput MapToOutput(this AccountEntity accountEntity) 
     {
         return new CreateAccountOcpSolutionOutput(accountEntity.AccountNumber);
     }

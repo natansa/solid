@@ -15,13 +15,7 @@ public class CreateAccountUseCase
 
     public CreateAccountUseCase()
     {
-        _accountTypeAnalisysService = new AccountTypeAnalisysService
-        (
-            new SmsService(), 
-            new ComplianceService(), 
-            new B3Service()
-        );
-
+        _accountTypeAnalisysService = new AccountTypeAnalisysService();
         _physicalPersonService = new PhysicalPersonService(new PhysicalPersonRepository());
         _accountService = new AccountService(new AccountRepository());
     }
@@ -33,10 +27,10 @@ public class CreateAccountUseCase
 
         if (successCreatedPhysicalPerson && successCreatedAccount.Success)
         {
-            // OPEN CLOSED WITH CHAIS OF RESPNSABILITY
+            //// OPEN CLOSED WITH CHAIS OF RESPNSABILITY
             _accountTypeAnalisysService.DispatcherChainsOfResponsability(successCreatedAccount.AccountEntity.MapToAnalisy(input));
 
-            // OPEN CLOSED WITH STRATEGY - MODEL ONE
+            //// OPEN CLOSED WITH STRATEGY - MODEL ONE
             _accountTypeAnalisysService.DispatcherStrategy(successCreatedAccount.AccountEntity.MapToAnalisy(input));
 
             // OPEN CLOSED WITH STRATEGY - MODEL TWO
@@ -56,7 +50,7 @@ public class CreateAccountUseCase
                     break;
             }
 
-            return successCreatedAccount.AccountEntity.MapToOuuput();
+            return successCreatedAccount.AccountEntity.MapToOutput();
         }
         
         return default;
